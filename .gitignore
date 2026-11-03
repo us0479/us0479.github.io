@@ -1,0 +1,16 @@
+.env
+.env.*
+!.env.example
+private/
+.vscode/
+.idea/
+node_modules/
+dist/
+build/
+target/
+*.log
+*.tmp
+*.bak
+Thumbs.db
+Desktop.ini
+.DS_Store

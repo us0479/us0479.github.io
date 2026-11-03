@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="us0479의 데이터베이스와 정보보안 학습 기록">
+  <title>us0479 | 개발 기록</title>
+
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      font-family: "Segoe UI", "Malgun Gothic", sans-serif;
+      line-height: 1.7;
+      color: #243247;
+      background: #f4f7fb;
+    }
+
+    a {
+      color: #2563eb;
+      text-decoration: none;
+    }
+
+    a:hover {
+      text-decoration: underline;
+    }
+
+    a:focus-visible {
+      outline: 3px solid #2563eb;
+      outline-offset: 4px;
+    }
+
+    .container {
+      width: 92%;
+      max-width: 960px;
+      margin: 0 auto;
+    }
+
+    header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 20px;
+      padding: 24px 0;
+      border-bottom: 1px solid #dce4ef;
+    }
+
+    .brand {
+      font-size: 20px;
+      font-weight: 700;
+      color: #172b49;
+    }
+
+    nav {
+      display: flex;
+      gap: 20px;
+    }
+
+    .hero {
+      padding: 64px 0 40px;
+    }
+
+    .label {
+      display: inline-block;
+      padding: 5px 12px;
+      border-radius: 20px;
+      color: #1d4ed8;
+      background: #e5edff;
+      font-size: 14px;
+      font-weight: 700;
+    }
+
+    h1 {
+      margin: 18px 0;
+      font-size: clamp(30px, 5vw, 46px);
+      line-height: 1.3;
+      color: #172b49;
+    }
+
+    .intro {
+      max-width: 650px;
+      color: #56657a;
+      font-size: 18px;
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 20px;
+      margin-bottom: 20px;
+    }
+
+    .card {
+      padding: 28px;
+      border: 1px solid #e0e7f0;
+      border-radius: 16px;
+      background: #ffffff;
+    }
+
+    h2 {
+      margin: 0 0 14px;
+      font-size: 23px;
+      color: #172b49;
+    }
+
+    h3 {
+      margin: 12px 0;
+      font-size: 20px;
+    }
+
+    .muted {
+      color: #64748b;
+    }
+
+    ul,
+    ol {
+      padding-left: 22px;
+    }
+
+    li {
+      margin-bottom: 10px;
+    }
+
+    .notice {
+      margin-top: 20px;
+      padding: 14px 16px;
+      border-radius: 10px;
+      color: #445875;
+      background: #f0f5ff;
+    }
+
+    footer {
+      padding: 30px 0;
+      color: #64748b;
+      font-size: 14px;
+    }
+
+    @media (max-width: 640px) {
+      header {
+        align-items: flex-start;
+        flex-direction: column;
+        gap: 12px;
+      }
+
+      .hero {
+        padding-top: 40px;
+      }
+
+      .grid {
+        grid-template-columns: 1fr;
+      }
+
+      .card {
+        padding: 22px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <div class="container">
+    <header>
+      <a class="brand" href="./">us0479</a>
+
+      <nav aria-label="주요 메뉴">
+        <a href="#project">프로젝트</a>
+        <a href="#progress">개발 기록</a>
+        <a
+          href="https://github.com/us0479"
+          target="_blank"
+          rel="noopener noreferrer"
+        >GitHub</a>
+      </nav>
+    </header>
+
+    <main>
+      <section class="hero" aria-labelledby="page-title">
+        <span class="label">데이터베이스 · 정보보안</span>
+        <h1 id="page-title">직접 만들고 이해하는 개발 기록</h1>
+        <p class="intro">
+          데이터베이스와 정보보안을 공부하며,
+          구현 과정과 검증 결과를 기록하는 us0479의 개인 홈페이지입니다.
+        </p>
+      </section>
+
+      <div class="grid">
+        <section class="card" aria-labelledby="about-title">
+          <h2 id="about-title">소개</h2>
+          <p>
+            기능이 동작하는 원리를 이해하고,
+            직접 구현한 내용을 설명할 수 있는 개발을 목표로 합니다.
+          </p>
+          <p class="muted">
+            현재는 개인 홈페이지를 구성하고
+            데이터베이스 프로젝트의 직접 개발을 준비하고 있습니다.
+          </p>
+        </section>
+
+        <section class="card" id="progress" aria-labelledby="progress-title">
+          <h2 id="progress-title">개발 진행 상황</h2>
+          <ol>
+            <li>Git 설치와 홈페이지 저장소 복제: 확인 완료</li>
+            <li>개인 홈페이지 첫 화면: 작성 중</li>
+            <li>BankWatch DB 설계와 직접 구현: 진행 예정</li>
+          </ol>
+        </section>
+      </div>
+
+      <section class="card" id="project" aria-labelledby="project-title">
+        <span class="label">직접 개발 준비</span>
+        <h2 id="project-title">BankWatch</h2>
+        <h3>모바일뱅킹 계정 이상접속 탐지 및 사고 대응 관리</h3>
+
+        <p>
+          가상 고객의 접속 기록에서 이상 징후를 탐지하고,
+          경보의 근거와 사건 대응 이력을 관리하는 프로젝트입니다.
+        </p>
+
+        <ul>
+          <li>구현 목표: 접속 로그 입력, 이상접속 탐지, 경보와 근거 조회</li>
+          <li>업무 흐름: 담당자 배정, 가상 계정 조치, 처리 이력 관리</li>
+          <li>학습 목표: PostgreSQL 설계, SQL, 트랜잭션과 동시성 검증</li>
+        </ul>
+
+        <p class="muted">
+          문서·소스·시연 링크는 직접 개발을 진행하며 추가할 예정입니다.
+        </p>
+
+        <p class="notice">
+          현재 페이지는 프로젝트 소개용 정적 홈페이지입니다.
+          실제 데이터베이스 기능은 아직 연결하지 않았습니다.
+        </p>
+      </section>
+    </main>
+
+    <footer>
+      us0479 · 개인 학습 및 프로젝트 기록
+    </footer>
+  </div>
+</body>
+</html>
