@@ -46,6 +46,14 @@ REQUIRED = (
     "src/main/resources/application.properties",
     "src/main/java/kr/ac/bankwatch/BankWatchApplication.java",
     "src/test/java/kr/ac/bankwatch/PostgresIntegrationTest.java",
+    # v1.11 Claude review: topic registration, change/handoff records, SQL-level audit tools and logs.
+    "docs/BankWatch_topic_registration.md", "docs/BankWatch_topic_registration.txt",
+    "docs/BankWatch_Claude_Change_Report.md", "docs/BankWatch_Claude_Session_Handoff.md",
+    "docs/REVIEW_STATE.json", "docs/RESUME_PROMPT.md",
+    "scripts/audit/funclen.py", "scripts/audit/sqlprep.py", "scripts/audit/pg_scenarios.sh",
+    "scripts/audit/pg_concurrency.sh", "scripts/audit/r02_fuzz.py",
+    # Public edition carries only the check summary; raw execution logs stay in the separate audit bundle.
+    "docs/verification/claude/BankWatch_claude_check_summary.json",
 )
 RESOURCE_COPIES = (
     ("dist/app.js", "src/main/resources/static/app.js"),
@@ -55,7 +63,7 @@ RESOURCE_COPIES = (
     ("samples/events-invalid-customer.csv", "src/main/resources/static/samples/events-invalid-customer.csv"),
     ("samples/events-boundaries.csv", "src/main/resources/static/samples/events-boundaries.csv"),
 )
-EXECUTABLES = {"mvnw", "scripts/init-db.sh"}
+EXECUTABLES = {"mvnw", "scripts/init-db.sh", "scripts/audit/pg_scenarios.sh", "scripts/audit/pg_concurrency.sh"}
 PASSWORD_FIELDS = {"OWNER_DB_PASSWORD", "APP_DB_PASSWORD", "BANKWATCH_ADMIN_PASSWORD",
                    "BANKWATCH_ANALYST_A_PASSWORD", "BANKWATCH_ANALYST_B_PASSWORD"}
 IGNORED_JAVA_DIRS = {".git", ".local", ".env", "private", "secrets", "credentials", "target",

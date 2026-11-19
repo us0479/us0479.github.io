@@ -1,0 +1,16 @@
+{
+  "kind": "bankwatch.claude_sql_level_check_summary",
+  "edition": "v1.11-public.1",
+  "run_session": "Claude review session 2026-11-19 KST (CP2). Not re-run during CP3 packaging.",
+  "raw_execution_logs_included": false,
+  "raw_logs_location": "Separate audit/checkpoint bundle only (audit-raw/claude-cp2-sql-run/), not in the public source ZIP or public site",
+  "environment": "Anthropic cloud Linux workspace, local PostgreSQL 16.15 dedicated cluster, DB bankwatch_test_claude, separate owner/app/verifier roles",
+  "scope": "SQL-level checks executing the verbatim Java SQL constants via PREPARE in service order. Not Maven, not JUnit, not HTTP.",
+  "checks": [
+    {"tool": "scripts/audit/funclen.py", "result": "PASS", "measured_blocks": 631, "max_lines": 60, "over_200": 0},
+    {"tool": "scripts/audit/pg_scenarios.sh", "result": "PASS", "passed": 37, "failed": 0},
+    {"tool": "scripts/audit/pg_concurrency.sh", "result": "PASS", "passed": 15, "failed": 0},
+    {"tool": "scripts/audit/r02_fuzz.py", "result": "PASS", "datasets_equal": 13, "datasets_total": 13}
+  ],
+  "not_run": ["Maven validate/package", "-Ppostgres-it verify (JUnit)", "authenticated HTTP", "browser", "Git commit/push", "GitHub Pages deploy"]
+}

@@ -1,7 +1,7 @@
-# BankWatch v1.10 — 공개용 소스
+# BankWatch v1.11 — 공개용 소스
 
-이 폴더는 실제 Windows에서 검증한 BankWatch v1.10의 공개 사본입니다.
-Spring Boot/Java/SQL/화면/샘플/Maven/통합 테스트의 runtime37개 파일은 검증본과 해시가 같습니다.
+이 폴더는 실제 Windows에서 검증한 BankWatch v1.10 runtime의 공개 사본이며, 문서는 v1.11로 개정했습니다.
+Spring Boot/Java/SQL/화면/샘플/Maven/통합 테스트의 runtime37개 파일은 v1.10 검증본과 해시가 같습니다.
 
 ## 웹에서 체험하기
 
@@ -11,12 +11,27 @@ GitHub Pages 체험판은 브라우저 시뮬레이션이며 Java 서버/DB 인�
 
 ## 공개판과 제출 원본
 
-공식 문서 버전은 v1.10, 사용자 지정 제출일은 2026-11-29입니다.
-공개판 표기는 v1.10-public.1입니다. Java/SQL 등 실행 코드는 바꾸지 않았습니다.
+공식 문서 버전은 v1.11, 사용자 지정 제출일은 2026-11-29입니다(실제 제출 여부는 별도).
+공개판 표기는 v1.11-public.1입니다. Java/SQL 등 실행 코드는 v1.10에서 바꾸지 않았습니다.
 비밀번호·토큰·운영자 실제 계정 정보·비공개 검증 로그는 공개판에 없습니다.
-공개 매니페스트/검증기/패키징 안내는 원문 로그 추출 대신 현재 파일52개와 runtime37개 지문을 확인합니다.
-제출 문서 PDF/XLSX/Markdown은 원본을 보존했습니다. 그 안의 schema1.4 실행 원문/추출 지시는 비공개 제출본을 설명하며 공개판에서는 원문을 추출하지 않습니다.
+공개 매니페스트/검증기/패키징 안내는 원문 로그 추출 대신 현재 파일67개와 runtime37개 지문을 확인합니다(v1.10-public.1은 52개).
+ERD PDF·명세 XLSX·데이터 사전은 v1.10 원본 바이트를 보존했고, 사용자 시나리오 Markdown만 v1.11로 개정했습니다. 그 안의 schema1.4 실행 원문/추출 지시는 비공개 제출본을 설명하며 공개판에서는 원문을 추출하지 않습니다.
 원본 제출 ZIP과 공개용 ZIP은 내용과 SHA-256이 다릅니다. 공개판을 원본 ZIP과 바이트가 같다고 주장하지 않습니다.
+
+## v1.11 Claude 검토 (2026-11-19)
+
+- 코드·SQL·화면 변경 없음. 사용자 시나리오에 교수 피드백 3·4(데이터 출처·수집·탐지 주체/시점, 도메인·DB 필요성, 경계 상황)와 양식 4.1~4.5·실행 예시를 보강했습니다.
+- 주제 등록문: `docs/BankWatch_topic_registration.md`, `.txt` (LMS 제출은 사용자가 직접 합니다).
+- 변경·인계 기록: `docs/BankWatch_Claude_Change_Report.md`, `docs/BankWatch_Claude_Session_Handoff.md`, `docs/REVIEW_STATE.json`, `docs/RESUME_PROMPT.md`.
+- SQL 수준 감사 도구: `scripts/audit/` (함수 200줄 검사, Java SQL 원문을 PREPARE로 실행하는 시나리오·동시성 검사, R02 무작위 대조). 공개판에는 결과 요약 `docs/verification/claude/BankWatch_claude_check_summary.json`만 두고, 실행 원문 로그는 공개 ZIP·공개 사이트에서 제외해 별도 감사 묶음에 보관합니다. 도구는 **`bankwatch_test_*` 전용 DB에서만** 실행하며 그 DB의 bankwatch 스키마를 비웁니다. Maven/JUnit/HTTP 시험을 대신하지 않습니다.
+
+```bash
+python3 -I scripts/audit/funclen.py .
+python3 -I scripts/audit/sqlprep.py . > /tmp/prepared.sql
+PGDATABASE=bankwatch_test_x bash scripts/audit/pg_scenarios.sh . /tmp/prepared.sql
+PGDATABASE=bankwatch_test_x bash scripts/audit/pg_concurrency.sh . /tmp/prepared.sql /tmp/bw-conc
+PGDATABASE=bankwatch_test_x python3 -I scripts/audit/r02_fuzz.py /tmp/prepared.sql 7
+```
 
 ## 빌드와 실제 앱
 

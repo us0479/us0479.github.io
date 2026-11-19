@@ -1,0 +1,97 @@
+{
+  "status": "PASS_FINAL_SOURCE_AND_LOCAL_CHECKS",
+  "date_kst": "2026-11-19",
+  "private_source_commit": "c8092b23d475bf501f69f52f253350dbd74d9aa1",
+  "CP3_integrity_checks": 142,
+  "runtime37_unchanged": true,
+  "document_checks": {
+    "status": "PASS",
+    "diagrams_byte_identical": 4,
+    "workbook_counts": {
+      "Requirement": 10,
+      "Feature": 4,
+      "Function": 10,
+      "Query": 23,
+      "Test": 11
+    },
+    "pdf_pages": 8,
+    "versions": {
+      "scenario": "v1.11",
+      "erd": "v1.10 unchanged",
+      "spec": "v1.10 unchanged",
+      "dictionary": "v1.10 unchanged"
+    }
+  },
+  "new_Codex_execution": {
+    "Maven_validate_package": "PASS",
+    "standard_PostgreSQL_tests": 0,
+    "PostgreSQL_integration": {
+      "status": "PASS",
+      "environment": "Codex Linux, Java21.0.13, Maven3.9.16, PostgreSQL16.16 fresh dedicated cluster",
+      "command": [
+        "./mvnw",
+        "-B",
+        "-ntp",
+        "-o",
+        "-Ppostgres-it",
+        "-s",
+        "/workspace/work/bankwatch-pom/settings.xml",
+        "-Dmaven.repo.local=/workspace/work/bankwatch-pom/m2",
+        "verify"
+      ],
+      "exit_code": 0,
+      "counts": {
+        "tests": 10,
+        "failures": 0,
+        "errors": 0,
+        "skipped": 0
+      },
+      "database": "bankwatch_test_final_cp3",
+      "HTTP_tests_rerun": false,
+      "Windows_tests_rerun": false,
+      "schema_cleanup": "Test class drops only its own schema; cluster stopped below",
+      "result_source": "target/failsafe-reports/TEST-kr.ac.bankwatch.PostgresIntegrationTest.xml"
+    },
+    "Pages_local_browser": {
+      "checks": 35,
+      "status": "PASS"
+    },
+    "function_length": {
+      "max_lines": 60,
+      "limit": 200,
+      "over_limit": 0
+    },
+    "private_manifest": "PASS_current_and_extracted",
+    "private_negative_backward_checks": 5
+  },
+  "historical_only": {
+    "Windows_B1_B2": {
+      "version": "v1.10 runtime37 identical",
+      "JUnit_tests": 10,
+      "HTTP_requests": 48,
+      "checks": 132,
+      "rerun_in_this_step": false
+    },
+    "Claude_CP2_SQL": {
+      "scenarios": 37,
+      "concurrency": 15,
+      "fuzz_datasets": 13,
+      "rerun_in_this_step": false
+    }
+  },
+  "public_source_package": {
+    "bytes": 501167,
+    "entries": 66,
+    "sha256": "dc02a5ee4d03147dc6f041ac812925c6ce10376466018569815a1da6ccd72d3a"
+  },
+  "private_C1_original_bytes_preserved_in_schema15": true,
+  "Windows_final_zip_binary_obtained": false,
+  "not_run": [
+    "Windows final apply",
+    "Windows HTTP rerun",
+    "full Compose bootstrap/app startup",
+    "human timed rehearsal",
+    "LMS submission"
+  ],
+  "deployment_evidence": "outside ZIP: https://us0479.github.io/bankwatch/deployment-receipt.json"
+}

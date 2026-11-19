@@ -1,7 +1,7 @@
 {
   "project": "BankWatch",
-  "official_version": "v1.10",
-  "public_edition": "v1.10-public.1",
+  "official_version": "v1.11",
+  "public_edition": "v1.11-public.1",
   "submission_date": "2026-11-29",
   "checked_on_kst": "2026-11-19",
   "data": "Synthetic authentication server results only",
@@ -81,12 +81,39 @@
   "private_submission_archive_unchanged": true,
   "scope": "User-uploaded Windows B1/B2 and C1 reports reviewed. Public summary is not the private raw validation archive. Test/request/check counts are separate.",
   "public_source_package": {
-    "edition": "v1.10-public.1",
-    "bytes": 453166,
-    "sha256": "0e0b5e02fdd95c02ce5295de0a1d32d32539d767aa3edad1aae61806113ce015",
-    "entries": 54,
+    "edition": "v1.11-public.1",
+    "file": "downloads/BankWatch-v1.11-public-source.zip",
+    "bytes": 501167,
+    "sha256": "dc02a5ee4d03147dc6f041ac812925c6ce10376466018569815a1da6ccd72d3a",
+    "entries": 66,
     "private_raw_logs_included": false,
+    "claude_raw_execution_logs_included": false,
     "runtime37_matches_verified_app": true,
-    "local_maven_validate": "PASS, Java21, PostgreSQL tests not rerun"
+    "local_maven_validate": "NOT_RUN for v1.11 package; v1.10 runtime37 identical, Windows B1 validate/package PASS is the existing v1.10 record",
+    "basis": "Public-edition based candidate; not merged into the private Windows original"
+  },
+  "runtime_verified_version": "v1.10 (runtime37 byte-identical in v1.11)",
+  "document_versions": {
+    "user_scenario": "v1.11",
+    "erd_pdf": "v1.10 (unchanged)",
+    "spec_xlsx": "v1.10 (unchanged)",
+    "data_dictionary": "v1.10 (unchanged)"
+  },
+  "codex_final_execution": {
+    "date_kst": "2026-11-19",
+    "environment": "Linux / Java21.0.13 / Maven3.9.16 / PostgreSQL16.16 isolated new cluster",
+    "Maven_validate_package": "PASS",
+    "PostgreSQL_integration": {
+      "tests": 10,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0
+    },
+    "Pages_local_browser_checks": 35,
+    "CP3_integrity_checks": 142,
+    "runtime37_unchanged": true,
+    "Windows_HTTP_rerun": false,
+    "detailed_result": "downloads/FINAL_VALIDATION.json",
+    "publication_receipt": "deployment-receipt.json"
   }
 }

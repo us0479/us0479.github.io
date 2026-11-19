@@ -1,0 +1,168 @@
+{
+  "project": "BankWatch",
+  "baseline_version": "v1.10",
+  "current_version": "v1.11 (scenario revised; ERD/spec/dictionary v1.10 unchanged, intentional mixed set) / public v1.11-public.1 CP3 candidate (supersedes CP2 candidate)",
+  "input_edition": "public",
+  "input_zip_sha256": "0e0b5e02fdd95c02ce5295de0a1d32d32539d767aa3edad1aae61806113ce015",
+  "stage": "CP3_PACKAGING_METADATA_FIXED",
+  "recorded_at_kst": "2026-11-19",
+  "runtime37_changed": false,
+  "changed_paths": [
+    {
+      "path": "docs/BankWatch_user-scenario.md",
+      "before": "b8bb0063d69018125486dd2757db708b5b735bd77f6e5088e81ea108ac2afcac",
+      "after": "ff460236226db9af14f1ea58bbedf1ce4f5ae4ea0e74aa39014a56614bbd6839",
+      "find": [
+        "FIND-02",
+        "FIND-03"
+      ]
+    },
+    {
+      "path": "README.md",
+      "before": "5f12891d308fda9fbef6747864f8269382d8b89c942debb58de91ceb3cfc135a",
+      "after": "7e2e528bd797d16758a5fc39ad4aff7294447fea47f8a63a40f7075479ec6a4a"
+    },
+    {
+      "path": "scripts/verify-manifest.py",
+      "before": "e86d21bc82340f154906ae0d1380965a750fd7e6a8284c17d447224af5679853",
+      "after": "c77b2789a0ed0ee196bf20bbd4b8b7ae92c7811db9a511b64c113aeee793a72a",
+      "find": [
+        "FIND-05",
+        "CP3-raw-log-guard"
+      ]
+    },
+    {
+      "path": "scripts/package-source.py",
+      "before": "ffe2d56fa9033861377f333797838da95e090f62a3d0930cee23b616d10f7bb7",
+      "after": "34f52ff56b6b7b622686640f27086d6ad19becfd2bc913e4e8a16d67c1ab1751",
+      "find": [
+        "FIND-05"
+      ]
+    },
+    {
+      "path": "docs/verification/BankWatch_verification_manifest.json",
+      "before": "d40774c6ee28c01d1cdc73b33038fdb95e5e861ab33b0dbf627a9ac103f9283a",
+      "after": "see external SHA256SUMS.txt / FINAL_DELIVERY_INDEX.json"
+    }
+  ],
+  "added_paths": 12,
+  "findings": [
+    {
+      "id": "FIND-01",
+      "status": "withdrawn",
+      "summary": "XLSX Query D cells looked truncated; continuation rows hold the rest by design; edit reverted, XLSX byte-identical"
+    },
+    {
+      "id": "FIND-02",
+      "status": "fixed",
+      "summary": "Scenario: data origin/collection/detection actor-time-location, DPI exclusion, domain & DB necessity, boundary scenarios"
+    },
+    {
+      "id": "FIND-03",
+      "status": "fixed",
+      "summary": "Scenario: template 4.1-4.5, QRY-20..23 rows, per-SC execution examples"
+    },
+    {
+      "id": "FIND-04",
+      "status": "info_no_change",
+      "summary": "Same-role backend termination is a PostgreSQL rule; app lacks pg_signal_backend; wording made precise"
+    },
+    {
+      "id": "FIND-05",
+      "status": "fixed",
+      "summary": "Verifier count from manifest (public-1.1.0); packager lists new files"
+    }
+  ],
+  "tests": [
+    {
+      "id": "CL-FUNC200",
+      "result": "PASS max 60 lines (re-run on CP3 tree: 642 blocks, 0 over 200)"
+    },
+    {
+      "id": "CL-PG-SQL",
+      "result": "PASS 37/37 (CP2 run; not re-run in CP3)",
+      "env": "local PostgreSQL 16.15, DB bankwatch_test_claude"
+    },
+    {
+      "id": "CL-PG-CONC",
+      "result": "PASS 15/15 (CP2 run; not re-run in CP3)"
+    },
+    {
+      "id": "CL-R02-FUZZ",
+      "result": "PASS 13/13 (CP2 run; not re-run in CP3)"
+    },
+    {
+      "id": "CL-XLSX-XREF",
+      "result": "PASS 10/4/10/23/11"
+    },
+    {
+      "id": "MAVEN_VALIDATE_PACKAGE",
+      "result": "NOT_RUN"
+    },
+    {
+      "id": "POSTGRES_IT_JUNIT",
+      "result": "NOT_RUN"
+    },
+    {
+      "id": "HTTP_BROWSER",
+      "result": "NOT_RUN"
+    },
+    {
+      "id": "WINDOWS_B1_B2",
+      "result": "existing v1.10 evidence, valid for unchanged runtime37; not re-run"
+    },
+    {
+      "id": "CP3_MANIFEST_PACKAGE_CROSSCHECK",
+      "result": "see FINAL_DELIVERY_INDEX.json cross_check (run in CP3)"
+    }
+  ],
+  "git": [
+    {
+      "repo": "us0479/bankwatch-db",
+      "last_known_head": "5ed28882ddcb5a808ebe1c3da58a9036ed6222c2",
+      "commit": "NOT_RUN",
+      "push": "NOT_RUN"
+    },
+    {
+      "repo": "us0479/us0479.github.io",
+      "last_known_deploy": "1fe190b1ad138a228f3f2e4cf6720ede5b7dcc76",
+      "commit": "NOT_RUN",
+      "push": "NOT_RUN",
+      "pages": "NOT_RUN"
+    }
+  ],
+  "artifacts": [
+    "BankWatch-v1.11-public-source.zip (+ package-report.json)",
+    "BankWatch-v1.11-public.patch",
+    "us0479.github.io-v1.11-site-update.zip (+ files.sha256.txt, site.patch)",
+    "SITE_DELETE_LIST.json / .md, site-delete.ps1, site-delete.sh",
+    "FINAL_DELIVERY_INDEX.json / .md",
+    "BankWatch_topic_registration.md / .txt",
+    "submission/ 3 documents",
+    "BankWatch_Claude_Checkpoint_v1.11_CP3-final.zip (+ contents list)",
+    "SHA256SUMS.txt (external)"
+  ],
+  "blocked": [
+    "maven build and postgres-it JUnit (no Maven Central)",
+    "git commit/push and Pages deploy (no credentials)",
+    "private raw evidence and private tools (not provided)",
+    "LMS submission (user action)"
+  ],
+  "next_action": "User: paste docs/BankWatch_topic_registration.txt into LMS topic registration before 2026-11-20 23:59 KST. Then Codex: merge into private Windows original, run Maven/JUnit/HTTP, then site update + delete list, commit/push, Pages check.",
+  "credentials_included": false,
+  "basis": "Public-edition based correction candidate. NOT merged into the private Windows original. No private manifest tool assumed; private merge and final verification by Codex later.",
+  "public_inventory_files": 64,
+  "raw_execution_logs_in_public": false,
+  "raw_logs_bundle": "checkpoint ZIP audit-raw/claude-cp2-sql-run/ (4 files, CP2 SHAs in CP2_PUBLIC_PATHS.sha256.txt)",
+  "cp3_changes": [
+    "site verification-summary public_source_package auto-computed from final ZIP",
+    "raw logs removed from public ZIP/site, summary JSON added",
+    "verifier rejects .log in public-1.1.0",
+    "SITE_DELETE_LIST + SHA-checked delete scripts",
+    "FINAL_DELIVERY_INDEX json/md"
+  ],
+  "excluded_from_final_delivery": [
+    "CP1 checkpoint ZIP",
+    "CP2 candidate ZIPs/patches (superseded; keep only as user-side audit copies)"
+  ]
+}
