@@ -1,0 +1,34 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="description" content="BankWatch 브라우저 체험판: 가상 인증 로그의 R02 탐지와 사건 대응">
+<title>BankWatch 체험판 | us0479</title>
+<link rel="stylesheet" href="./assets/app.css">
+<style>
+.demo-banner{display:block;padding:14px 24px;background:#eaf2ff;border-bottom:1px solid #ccd9ed;font:14px/1.6 "Malgun Gothic",sans-serif;color:#243b5a}
+.demo-banner h1{font-size:17px;margin:0 0 4px}.demo-banner p{margin:0 0 8px}.demo-tools{display:flex;align-items:center;flex-wrap:wrap;gap:8px}
+.demo-tools select{font:inherit;border:1px solid #b9c9df;border-radius:8px;background:white;padding:8px;max-width:100%}
+.demo-banner a{color:#1e5ab8;text-decoration:underline}.demo-banner strong{color:#123e73}.shell{min-height:calc(100vh - 150px)}
+.demo-links{display:flex;flex-wrap:wrap;gap:16px;margin-top:8px}.demo-banner .hint{font-size:12px;margin-top:8px;color:#3d5677}
+@media(max-width:640px){.demo-banner{display:block;padding:14px 16px}.demo-tools{gap:6px}.demo-tools .btn{font-size:12px;padding:8px}.login-layout{min-height:70vh}}
+</style>
+</head>
+<body>
+<section class="demo-banner" aria-label="체험 안내">
+<h1>BankWatch · 브라우저 체험판</h1>
+<p><strong>가상 데이터 체험입니다.</strong> 변경은 이 브라우저에만 저장되며 실제 은행 계정과 연결되지 않습니다. 실제 앱은 Spring Boot·PostgreSQL에서 별도로 검증했습니다.</p>
+<div class="demo-tools">
+<label for="demo-role">역할 전환</label><select id="demo-role"><option value="">역할 선택</option><option value="demo-admin">관리자</option><option value="demo-a">관제 담당자 A</option><option value="demo-b">관제 담당자 B</option></select>
+<button id="demo-normal" type="button" class="btn primary small">정상 7건 입력</button>
+<button id="demo-invalid" type="button" class="btn small">고객 참조 오류 입력</button>
+<button id="demo-reset" type="button" class="btn small">체험 초기화</button>
+</div>
+<p class="hint">처음이라면 관리자 선택 → 정상 7건 입력 → 경보·사건에서 탐지 실행 → 담당자로 전환해 사건 맡기·보호 → 관리자 해제 순서로 사용하세요. 실제 고객 자료는 입력하지 마세요.</p>
+<div class="demo-links"><a href="../">개인 홈페이지</a><a href="./downloads/BankWatch-v1.10-public-source.zip" download>공개용 전체 소스 ZIP</a><a href="./downloads/BankWatch_erd.pdf">논리 ERD</a><a href="./verification-summary.json">실제 앱 검증 요약</a><a href="https://github.com/us0479/us0479.github.io/tree/main/bankwatch/source" target="_blank" rel="noopener noreferrer">소스 보기</a></div>
+<p class="hint">DB 행 잠금·연결 중단·교착 처리는 이 체험판의 시험 대상이 아닙니다. 실제 PostgreSQL 실행 결과는 검증 요약에 구분해 기록했습니다.</p>
+</section>
+<div id="app"><div class="boot"><span class="logo-mark">BW</span><p>체험 화면을 준비하고 있습니다.</p></div></div>
+<div id="toast" role="status" aria-live="polite"></div>
+<script src="./assets/demo-engine.js"></script><script src="./assets/demo-app.js"></script>
+</body></html>

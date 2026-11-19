@@ -1,0 +1,542 @@
+{
+  "schema_version": "public-1.0.0",
+  "kind": "bankwatch.public_source_snapshot",
+  "snapshot": {
+    "created_at_kst": "2026-11-19T17:20:44.175528+09:00",
+    "project": "BankWatch",
+    "manifest_path": "docs/verification/BankWatch_verification_manifest.json",
+    "manifest_self_hash": null,
+    "official_submission_version": "v1.10",
+    "official_submission_date": "2026-11-29",
+    "edition": "v1.10-public.1",
+    "final_submission": false
+  },
+  "inventory": [
+    {
+      "path": ".dockerignore",
+      "sha256": "f28f2562f91cddc5dfd354c518ac6a9be8344dc2d8c8485f803272231544ebf1",
+      "bytes": 48,
+      "strict_source_integrity": false,
+      "hash_is_execution_proof": false,
+      "role": "current_configuration_or_entrypoint"
+    },
+    {
+      "path": ".env.example",
+      "sha256": "a03c349547967dc0ad447f100f2f547ce19538bd6ca2b5c065fa2b58dae0a3c7",
+      "bytes": 1119,
+      "strict_source_integrity": false,
+      "hash_is_execution_proof": false,
+      "role": "current_configuration_or_entrypoint"
+    },
+    {
+      "path": ".github/workflows/postgres-integration.yml",
+      "sha256": "aa8aae70237ce551fd237383543becb8c805ed39b92176aa0e37ba463e0d4a3a",
+      "bytes": 6257,
+      "strict_source_integrity": false,
+      "hash_is_execution_proof": false,
+      "role": "current_configuration_or_entrypoint"
+    },
+    {
+      "path": ".gitignore",
+      "sha256": "cae5c58c570959b1f9a3d0634f1d913ec5d885ab5ead8b12d833f3ff8b87c06c",
+      "bytes": 542,
+      "strict_source_integrity": false,
+      "hash_is_execution_proof": false,
+      "role": "current_configuration_or_entrypoint"
+    },
+    {
+      "path": ".mvn/wrapper/maven-wrapper.properties",
+      "sha256": "9e702bcd7e68ba1cace0a3382a7082e6e1e1b321688a7a3fbf4d5ae7eb0af533",
+      "bytes": 255,
+      "strict_source_integrity": true,
+      "hash_is_execution_proof": false,
+      "role": "current_configuration_or_entrypoint"
+    },
+    {
+      "path": "Dockerfile",
+      "sha256": "312399441413c20abda0f802b0962467f4813eba30b650d401b6958b87584980",
+      "bytes": 431,
+      "strict_source_integrity": false,
+      "hash_is_execution_proof": false,
+      "role": "current_configuration_or_entrypoint"
+    },
+    {
+      "path": "README.md",
+      "sha256": "5f12891d308fda9fbef6747864f8269382d8b89c942debb58de91ceb3cfc135a",
+      "bytes": 18075,
+      "strict_source_integrity": false,
+      "hash_is_execution_proof": false,
+      "role": "current_document"
+    },
+    {
+      "path": "compose.yaml",
+      "sha256": "cc8ce3393d3282085be041e01e99147dd8c9632412e38dde6485421c92d9a592",
+      "bytes": 2782,
+      "strict_source_integrity": false,
+      "hash_is_execution_proof": false,
+      "role": "current_configuration_or_entrypoint"
+    },
+    {
+      "path": "db/grant_runtime.sql",
+      "sha256": "a646017c98c932bd4ee6e14a97ad0db3f904c7104b64d1d0e0a32e79f301e449",
+      "bytes": 5660,
+      "strict_source_integrity": true,
+      "hash_is_execution_proof": false,
+      "role": "canonical_database_sql"
+    },
+    {
+      "path": "db/schema.sql",
+      "sha256": "8e92b51ed257bcdf5bb57f0072669ac001628857791b81dd2871283b988bf883",
+      "bytes": 11942,
+      "strict_source_integrity": true,
+      "hash_is_execution_proof": false,
+      "role": "canonical_database_sql"
+    },
+    {
+      "path": "db/seed.sql",
+      "sha256": "94e96d104d6541ef194963e5dce56d65132c1c42d313aee1f8820bd57d0329c9",
+      "bytes": 1980,
+      "strict_source_integrity": true,
+      "hash_is_execution_proof": false,
+      "role": "canonical_database_sql"
+    },
+    {
+      "path": "dist/app.css",
+      "sha256": "5b71c28525c0d0f10f09f58a35f4caa0fac4489569bdd6610b0f3145fbe176c5",
+      "bytes": 15439,
+      "strict_source_integrity": true,
+      "hash_is_execution_proof": false,
+      "role": "canonical_ui"
+    },
+    {
+      "path": "dist/app.js",
+      "sha256": "5faf33c79706f39bdb523fc5d61b6b9b1f1c32a847cdfb903ab95327781d3519",
+      "bytes": 33599,
+      "strict_source_integrity": true,
+      "hash_is_execution_proof": false,
+      "role": "canonical_ui"
+    },
+    {
+      "path": "dist/index.html",
+      "sha256": "73ea9c5d9e6758968746e03db8a08c743acde29409619fd505c1bc51351da36d",
+      "bytes": 536,
+      "strict_source_integrity": true,
+      "hash_is_execution_proof": false,
+      "role": "canonical_ui"
+    },
+    {
+      "path": "docs/BankWatch_data_dictionary.md",
+      "sha256": "07f17e97741c3d3ffb00ab8b042bb5f5d798ba32ac4dab1bf3dc17daf997add8",
+      "bytes": 40320,
+      "strict_source_integrity": false,
+      "hash_is_execution_proof": false,
+      "role": "current_document"
+    },
+    {
+      "path": "docs/BankWatch_erd.pdf",
+      "sha256": "b77b8a3a113b042a71b0549c64065de5e466dd6cddc2bd97fd93d56677aff622",
+      "bytes": 235877,
+      "strict_source_integrity": false,
+      "hash_is_execution_proof": false,
+      "role": "current_document"
+    },
+    {
+      "path": "docs/BankWatch_spec.xlsx",
+      "sha256": "9005fd3abd6f37b5808c0ec4b510478d2ea085bdff082e34e9f7e5197a86a9f6",
+      "bytes": 83958,
+      "strict_source_integrity": false,
+      "hash_is_execution_proof": false,
+      "role": "current_document"
+    },
+    {
+      "path": "docs/BankWatch_user-scenario.md",
+      "sha256": "b8bb0063d69018125486dd2757db708b5b735bd77f6e5088e81ea108ac2afcac",
+      "bytes": 28884,
+      "strict_source_integrity": false,
+      "hash_is_execution_proof": false,
+      "role": "current_document"
+    },
+    {
+      "path": "mvnw",
+      "sha256": "cae96cef89ebea3531221f4ae17c23cf8edf67d00eae8306d4186ae1bbed4d02",
+      "bytes": 11790,
+      "strict_source_integrity": true,
+      "hash_is_execution_proof": false,
+      "role": "current_configuration_or_entrypoint"
+    },
+    {
+      "path": "mvnw.cmd",
+      "sha256": "46eedb8419bd14fe70d5bb2916d7b6f51806e51b39d5b76a42610384ca929c1c",
+      "bytes": 8481,
+      "strict_source_integrity": true,
+      "hash_is_execution_proof": false,
+      "role": "current_configuration_or_entrypoint"
+    },
+    {
+      "path": "pom.xml",
+      "sha256": "c68b355055c2333f1a5ea31a153f3dcb013e857e46b642c400167eb3c121cb2e",
+      "bytes": 4805,
+      "strict_source_integrity": true,
+      "hash_is_execution_proof": false,
+      "role": "current_configuration_or_entrypoint"
+    },
+    {
+      "path": "samples/events-boundaries.csv",
+      "sha256": "a70547b61d5b6620a29229f306ec4705fe82383bae2081b952d149785a9a6e52",
+      "bytes": 2755,
+      "strict_source_integrity": true,
+      "hash_is_execution_proof": false,
+      "role": "canonical_sample"
+    },
+    {
+      "path": "samples/events-invalid-customer.csv",
+      "sha256": "b111b4e034c7c0e7d446320dedf0c54190f0a0779840952191389948fe0a75a0",
+      "bytes": 194,
+      "strict_source_integrity": true,
+      "hash_is_execution_proof": false,
+      "role": "canonical_sample"
+    },
+    {
+      "path": "samples/events-r02.csv",
+      "sha256": "3cdcae87967e6fc33808cc93b7b478c93b4200d088a2802252b81f256a8bd7fb",
+      "bytes": 507,
+      "strict_source_integrity": true,
+      "hash_is_execution_proof": false,
+      "role": "canonical_sample"
+    },
+    {
+      "path": "scripts/init-db.sh",
+      "sha256": "95af5805d5069a0eb6c83758d36c1dadb733c4e4c64234270f20f082b0876532",
+      "bytes": 452,
+      "strict_source_integrity": false,
+      "hash_is_execution_proof": false,
+      "role": "current_tool_or_entrypoint"
+    },
+    {
+      "path": "scripts/package-source.py",
+      "sha256": "ffe2d56fa9033861377f333797838da95e090f62a3d0930cee23b616d10f7bb7",
+      "bytes": 19094,
+      "strict_source_integrity": false,
+      "hash_is_execution_proof": false,
+      "role": "current_tool_or_entrypoint"
+    },
+    {
+      "path": "scripts/sync-assets.py",
+      "sha256": "2b0e4b364d12c8e77bfd539edc8e1799213a8b5ebe75822ae208846a36f39be5",
+      "bytes": 1388,
+      "strict_source_integrity": false,
+      "hash_is_execution_proof": false,
+      "role": "current_tool_or_entrypoint"
+    },
+    {
+      "path": "scripts/verify-manifest.py",
+      "sha256": "e86d21bc82340f154906ae0d1380965a750fd7e6a8284c17d447224af5679853",
+      "bytes": 3203,
+      "strict_source_integrity": false,
+      "hash_is_execution_proof": false,
+      "role": "current_tool_or_entrypoint"
+    },
+    {
+      "path": "src/main/java/kr/ac/bankwatch/ApiController.java",
+      "sha256": "45c20a3505b243c4286129eb80f0b949acd6124140fbec55bcda9f58e2709f00",
+      "bytes": 2109,
+      "strict_source_integrity": true,
+      "hash_is_execution_proof": false,
+      "role": "canonical_java"
+    },
+    {
+      "path": "src/main/java/kr/ac/bankwatch/ApiErrors.java",
+      "sha256": "3dd7a7edb96c45794085008814a2fb072e5e7508ad120f3ff12382ccd21fe6d6",
+      "bytes": 5688,
+      "strict_source_integrity": true,
+      "hash_is_execution_proof": false,
+      "role": "canonical_java"
+    },
+    {
+      "path": "src/main/java/kr/ac/bankwatch/ApiProblem.java",
+      "sha256": "4297b2bfe257d251da7f6a829c33a021ab80187027e0cff69d26eee065bb7d73",
+      "bytes": 186,
+      "strict_source_integrity": true,
+      "hash_is_execution_proof": false,
+      "role": "canonical_java"
+    },
+    {
+      "path": "src/main/java/kr/ac/bankwatch/BankWatchApplication.java",
+      "sha256": "c2e09a3d0505674e18924d4970a0584dd5190734fb16afdcdaff958207c09779",
+      "bytes": 303,
+      "strict_source_integrity": true,
+      "hash_is_execution_proof": false,
+      "role": "canonical_java"
+    },
+    {
+      "path": "src/main/java/kr/ac/bankwatch/Db.java",
+      "sha256": "525f81074ff730bddcc47485833959ae70f64ee17a7c424e2cee4e50239f2c8b",
+      "bytes": 7525,
+      "strict_source_integrity": true,
+      "hash_is_execution_proof": false,
+      "role": "canonical_java"
+    },
+    {
+      "path": "src/main/java/kr/ac/bankwatch/OperatorBootstrap.java",
+      "sha256": "bd421827648fd6f5ad03b8760f156d4b167d88fcf05c056ddf5488b242e30536",
+      "bytes": 6946,
+      "strict_source_integrity": true,
+      "hash_is_execution_proof": false,
+      "role": "canonical_java"
+    },
+    {
+      "path": "src/main/java/kr/ac/bankwatch/SecurityConfig.java",
+      "sha256": "2b55110fa8b5a76b14ed3c2699cee8c86266e3f364925e0fc40baf3f0350e7f7",
+      "bytes": 6177,
+      "strict_source_integrity": true,
+      "hash_is_execution_proof": false,
+      "role": "canonical_java"
+    },
+    {
+      "path": "src/main/java/kr/ac/bankwatch/detection/AlertQueryService.java",
+      "sha256": "16fc9ec78980b1f106cfaa5ad0bd009a24f9d4b06e5fe7835409024b67ab14b2",
+      "bytes": 10574,
+      "strict_source_integrity": true,
+      "hash_is_execution_proof": false,
+      "role": "canonical_java"
+    },
+    {
+      "path": "src/main/java/kr/ac/bankwatch/detection/DetectionController.java",
+      "sha256": "519cd5f32d2977d24e61c500ec70c1e09155333d461b3df27ed21f21f88371cc",
+      "bytes": 4194,
+      "strict_source_integrity": true,
+      "hash_is_execution_proof": false,
+      "role": "canonical_java"
+    },
+    {
+      "path": "src/main/java/kr/ac/bankwatch/detection/DetectionService.java",
+      "sha256": "ce21dc444a1d59764d3316ed07ba16ecbff8e10702f677c7c8b59cee6c91bd8f",
+      "bytes": 10157,
+      "strict_source_integrity": true,
+      "hash_is_execution_proof": false,
+      "role": "canonical_java"
+    },
+    {
+      "path": "src/main/java/kr/ac/bankwatch/event/EventController.java",
+      "sha256": "35c9c10adbc80557421af1cb4f8c96577dea1308580b4f7207fa816eb5e9d76f",
+      "bytes": 3006,
+      "strict_source_integrity": true,
+      "hash_is_execution_proof": false,
+      "role": "canonical_java"
+    },
+    {
+      "path": "src/main/java/kr/ac/bankwatch/event/EventQueryService.java",
+      "sha256": "4123b118d1471bddd0c3d33e30a4085c43f8487b44b1298ebcd84ad1867aa4a1",
+      "bytes": 8361,
+      "strict_source_integrity": true,
+      "hash_is_execution_proof": false,
+      "role": "canonical_java"
+    },
+    {
+      "path": "src/main/java/kr/ac/bankwatch/event/EventService.java",
+      "sha256": "e72a2843d607bba40271198470074bab4476bbbd619431a420cdb6a601145280",
+      "bytes": 10988,
+      "strict_source_integrity": true,
+      "hash_is_execution_proof": false,
+      "role": "canonical_java"
+    },
+    {
+      "path": "src/main/java/kr/ac/bankwatch/incident/IncidentActionService.java",
+      "sha256": "83a9153927619e1187d49517d0d61e9f1eea303b6af9357d31b13cb4daa318ce",
+      "bytes": 9977,
+      "strict_source_integrity": true,
+      "hash_is_execution_proof": false,
+      "role": "canonical_java"
+    },
+    {
+      "path": "src/main/java/kr/ac/bankwatch/incident/IncidentClaimService.java",
+      "sha256": "bc9d22dc753a9f5e910c87ac729f0f9e361f8534c865d207d037cd198694c51b",
+      "bytes": 4391,
+      "strict_source_integrity": true,
+      "hash_is_execution_proof": false,
+      "role": "canonical_java"
+    },
+    {
+      "path": "src/main/java/kr/ac/bankwatch/incident/IncidentController.java",
+      "sha256": "cbf0da9c1ced97a6798981b3747bbd9df78058e4e94aa593c8b8065cfc95c2bd",
+      "bytes": 5533,
+      "strict_source_integrity": true,
+      "hash_is_execution_proof": false,
+      "role": "canonical_java"
+    },
+    {
+      "path": "src/main/resources/application.properties",
+      "sha256": "560f7807900fc1ce641b9d25f3f7b5c65f5ea18633f1d1e1a5f9d12caa9cd0a6",
+      "bytes": 1177,
+      "strict_source_integrity": true,
+      "hash_is_execution_proof": false,
+      "role": "current_configuration_or_entrypoint"
+    },
+    {
+      "path": "src/main/resources/static/app.css",
+      "sha256": "5b71c28525c0d0f10f09f58a35f4caa0fac4489569bdd6610b0f3145fbe176c5",
+      "bytes": 15439,
+      "strict_source_integrity": true,
+      "hash_is_execution_proof": false,
+      "role": "derived_resource_copy"
+    },
+    {
+      "path": "src/main/resources/static/app.js",
+      "sha256": "5faf33c79706f39bdb523fc5d61b6b9b1f1c32a847cdfb903ab95327781d3519",
+      "bytes": 33599,
+      "strict_source_integrity": true,
+      "hash_is_execution_proof": false,
+      "role": "derived_resource_copy"
+    },
+    {
+      "path": "src/main/resources/static/samples/events-boundaries.csv",
+      "sha256": "a70547b61d5b6620a29229f306ec4705fe82383bae2081b952d149785a9a6e52",
+      "bytes": 2755,
+      "strict_source_integrity": true,
+      "hash_is_execution_proof": false,
+      "role": "derived_resource_copy"
+    },
+    {
+      "path": "src/main/resources/static/samples/events-invalid-customer.csv",
+      "sha256": "b111b4e034c7c0e7d446320dedf0c54190f0a0779840952191389948fe0a75a0",
+      "bytes": 194,
+      "strict_source_integrity": true,
+      "hash_is_execution_proof": false,
+      "role": "derived_resource_copy"
+    },
+    {
+      "path": "src/main/resources/static/samples/events-r02.csv",
+      "sha256": "3cdcae87967e6fc33808cc93b7b478c93b4200d088a2802252b81f256a8bd7fb",
+      "bytes": 507,
+      "strict_source_integrity": true,
+      "hash_is_execution_proof": false,
+      "role": "derived_resource_copy"
+    },
+    {
+      "path": "src/main/resources/templates/index.html",
+      "sha256": "73ea9c5d9e6758968746e03db8a08c743acde29409619fd505c1bc51351da36d",
+      "bytes": 536,
+      "strict_source_integrity": true,
+      "hash_is_execution_proof": false,
+      "role": "derived_resource_copy"
+    },
+    {
+      "path": "src/test/java/kr/ac/bankwatch/PostgresIntegrationTest.java",
+      "sha256": "47a99d4284af25675dc8e86a33b34568d3d05f67755107732351f67d32aecac3",
+      "bytes": 56896,
+      "strict_source_integrity": true,
+      "hash_is_execution_proof": false,
+      "role": "canonical_java"
+    }
+  ],
+  "runtime_source_sha256": {
+    ".mvn/wrapper/maven-wrapper.properties": "9e702bcd7e68ba1cace0a3382a7082e6e1e1b321688a7a3fbf4d5ae7eb0af533",
+    "db/grant_runtime.sql": "a646017c98c932bd4ee6e14a97ad0db3f904c7104b64d1d0e0a32e79f301e449",
+    "db/schema.sql": "8e92b51ed257bcdf5bb57f0072669ac001628857791b81dd2871283b988bf883",
+    "db/seed.sql": "94e96d104d6541ef194963e5dce56d65132c1c42d313aee1f8820bd57d0329c9",
+    "dist/app.css": "5b71c28525c0d0f10f09f58a35f4caa0fac4489569bdd6610b0f3145fbe176c5",
+    "dist/app.js": "5faf33c79706f39bdb523fc5d61b6b9b1f1c32a847cdfb903ab95327781d3519",
+    "dist/index.html": "73ea9c5d9e6758968746e03db8a08c743acde29409619fd505c1bc51351da36d",
+    "mvnw": "cae96cef89ebea3531221f4ae17c23cf8edf67d00eae8306d4186ae1bbed4d02",
+    "mvnw.cmd": "46eedb8419bd14fe70d5bb2916d7b6f51806e51b39d5b76a42610384ca929c1c",
+    "pom.xml": "c68b355055c2333f1a5ea31a153f3dcb013e857e46b642c400167eb3c121cb2e",
+    "samples/events-boundaries.csv": "a70547b61d5b6620a29229f306ec4705fe82383bae2081b952d149785a9a6e52",
+    "samples/events-invalid-customer.csv": "b111b4e034c7c0e7d446320dedf0c54190f0a0779840952191389948fe0a75a0",
+    "samples/events-r02.csv": "3cdcae87967e6fc33808cc93b7b478c93b4200d088a2802252b81f256a8bd7fb",
+    "src/main/java/kr/ac/bankwatch/ApiController.java": "45c20a3505b243c4286129eb80f0b949acd6124140fbec55bcda9f58e2709f00",
+    "src/main/java/kr/ac/bankwatch/ApiErrors.java": "3dd7a7edb96c45794085008814a2fb072e5e7508ad120f3ff12382ccd21fe6d6",
+    "src/main/java/kr/ac/bankwatch/ApiProblem.java": "4297b2bfe257d251da7f6a829c33a021ab80187027e0cff69d26eee065bb7d73",
+    "src/main/java/kr/ac/bankwatch/BankWatchApplication.java": "c2e09a3d0505674e18924d4970a0584dd5190734fb16afdcdaff958207c09779",
+    "src/main/java/kr/ac/bankwatch/Db.java": "525f81074ff730bddcc47485833959ae70f64ee17a7c424e2cee4e50239f2c8b",
+    "src/main/java/kr/ac/bankwatch/OperatorBootstrap.java": "bd421827648fd6f5ad03b8760f156d4b167d88fcf05c056ddf5488b242e30536",
+    "src/main/java/kr/ac/bankwatch/SecurityConfig.java": "2b55110fa8b5a76b14ed3c2699cee8c86266e3f364925e0fc40baf3f0350e7f7",
+    "src/main/java/kr/ac/bankwatch/detection/AlertQueryService.java": "16fc9ec78980b1f106cfaa5ad0bd009a24f9d4b06e5fe7835409024b67ab14b2",
+    "src/main/java/kr/ac/bankwatch/detection/DetectionController.java": "519cd5f32d2977d24e61c500ec70c1e09155333d461b3df27ed21f21f88371cc",
+    "src/main/java/kr/ac/bankwatch/detection/DetectionService.java": "ce21dc444a1d59764d3316ed07ba16ecbff8e10702f677c7c8b59cee6c91bd8f",
+    "src/main/java/kr/ac/bankwatch/event/EventController.java": "35c9c10adbc80557421af1cb4f8c96577dea1308580b4f7207fa816eb5e9d76f",
+    "src/main/java/kr/ac/bankwatch/event/EventQueryService.java": "4123b118d1471bddd0c3d33e30a4085c43f8487b44b1298ebcd84ad1867aa4a1",
+    "src/main/java/kr/ac/bankwatch/event/EventService.java": "e72a2843d607bba40271198470074bab4476bbbd619431a420cdb6a601145280",
+    "src/main/java/kr/ac/bankwatch/incident/IncidentActionService.java": "83a9153927619e1187d49517d0d61e9f1eea303b6af9357d31b13cb4daa318ce",
+    "src/main/java/kr/ac/bankwatch/incident/IncidentClaimService.java": "bc9d22dc753a9f5e910c87ac729f0f9e361f8534c865d207d037cd198694c51b",
+    "src/main/java/kr/ac/bankwatch/incident/IncidentController.java": "cbf0da9c1ced97a6798981b3747bbd9df78058e4e94aa593c8b8065cfc95c2bd",
+    "src/main/resources/application.properties": "560f7807900fc1ce641b9d25f3f7b5c65f5ea18633f1d1e1a5f9d12caa9cd0a6",
+    "src/main/resources/static/app.css": "5b71c28525c0d0f10f09f58a35f4caa0fac4489569bdd6610b0f3145fbe176c5",
+    "src/main/resources/static/app.js": "5faf33c79706f39bdb523fc5d61b6b9b1f1c32a847cdfb903ab95327781d3519",
+    "src/main/resources/static/samples/events-boundaries.csv": "a70547b61d5b6620a29229f306ec4705fe82383bae2081b952d149785a9a6e52",
+    "src/main/resources/static/samples/events-invalid-customer.csv": "b111b4e034c7c0e7d446320dedf0c54190f0a0779840952191389948fe0a75a0",
+    "src/main/resources/static/samples/events-r02.csv": "3cdcae87967e6fc33808cc93b7b478c93b4200d088a2802252b81f256a8bd7fb",
+    "src/main/resources/templates/index.html": "73ea9c5d9e6758968746e03db8a08c743acde29409619fd505c1bc51351da36d",
+    "src/test/java/kr/ac/bankwatch/PostgresIntegrationTest.java": "47a99d4284af25675dc8e86a33b34568d3d05f67755107732351f67d32aecac3"
+  },
+  "summary": {
+    "windows_JUnit_tests": 10,
+    "windows_HTTP_requests": 48,
+    "windows_checks": 132,
+    "raw_execution_evidence_included": false
+  },
+  "embedded_blobs": {},
+  "evidence_runs": [],
+  "derived_asset_sync": {
+    "status": "MATCH",
+    "pairs": [
+      {
+        "source": "dist/app.js",
+        "source_sha256": "5faf33c79706f39bdb523fc5d61b6b9b1f1c32a847cdfb903ab95327781d3519",
+        "destination": "src/main/resources/static/app.js",
+        "destination_sha256": "5faf33c79706f39bdb523fc5d61b6b9b1f1c32a847cdfb903ab95327781d3519",
+        "status": "MATCH"
+      },
+      {
+        "source": "dist/app.css",
+        "source_sha256": "5b71c28525c0d0f10f09f58a35f4caa0fac4489569bdd6610b0f3145fbe176c5",
+        "destination": "src/main/resources/static/app.css",
+        "destination_sha256": "5b71c28525c0d0f10f09f58a35f4caa0fac4489569bdd6610b0f3145fbe176c5",
+        "status": "MATCH"
+      },
+      {
+        "source": "dist/index.html",
+        "source_sha256": "73ea9c5d9e6758968746e03db8a08c743acde29409619fd505c1bc51351da36d",
+        "destination": "src/main/resources/templates/index.html",
+        "destination_sha256": "73ea9c5d9e6758968746e03db8a08c743acde29409619fd505c1bc51351da36d",
+        "status": "MATCH"
+      },
+      {
+        "source": "samples/events-boundaries.csv",
+        "source_sha256": "a70547b61d5b6620a29229f306ec4705fe82383bae2081b952d149785a9a6e52",
+        "destination": "src/main/resources/static/samples/events-boundaries.csv",
+        "destination_sha256": "a70547b61d5b6620a29229f306ec4705fe82383bae2081b952d149785a9a6e52",
+        "status": "MATCH"
+      },
+      {
+        "source": "samples/events-invalid-customer.csv",
+        "source_sha256": "b111b4e034c7c0e7d446320dedf0c54190f0a0779840952191389948fe0a75a0",
+        "destination": "src/main/resources/static/samples/events-invalid-customer.csv",
+        "destination_sha256": "b111b4e034c7c0e7d446320dedf0c54190f0a0779840952191389948fe0a75a0",
+        "status": "MATCH"
+      },
+      {
+        "source": "samples/events-r02.csv",
+        "source_sha256": "3cdcae87967e6fc33808cc93b7b478c93b4200d088a2802252b81f256a8bd7fb",
+        "destination": "src/main/resources/static/samples/events-r02.csv",
+        "destination_sha256": "3cdcae87967e6fc33808cc93b7b478c93b4200d088a2802252b81f256a8bd7fb",
+        "status": "MATCH"
+      }
+    ],
+    "source_of_truth": "dist/ and root samples/; SQL source is db/",
+    "windows_cmd": "py -3 scripts\\sync-assets.py",
+    "executed_this_step": false,
+    "note": "Six current UI/CSV copies already match canonical inputs. Earlier synchronization, latest JAR resource checks and HTTP checks are recorded; manifest creation does not rerun synchronization."
+  },
+  "disclosure": {
+    "omitted": "Private embedded raw reports, console logs, credentials, runtime.json, .env, DB data and build outputs",
+    "changed_public_only_files": [
+      "README.md",
+      "scripts/verify-manifest.py",
+      "scripts/package-source.py",
+      "docs/verification/BankWatch_verification_manifest.json"
+    ],
+    "unchanged_runtime_files": 37,
+    "unchanged_submission_documents": 4,
+    "actual_server_execution_on_GitHub_Pages": false
+  }
+}

@@ -1,0 +1,8 @@
+event_id,customer_ref,occurred_at,device_ref,event_type,is_new_device
+1,C1001,2026-11-02T10:00:30+09:00,known-device,LOGIN_FAILED,
+2,C1001,2026-11-02T10:01:00+09:00,known-device,LOGIN_FAILED,
+3,C1001,2026-11-02T10:02:00+09:00,known-device,LOGIN_FAILED,
+4,C1001,2026-11-02T10:03:00+09:00,known-device,LOGIN_FAILED,
+5,C1001,2026-11-02T10:04:00+09:00,known-device,LOGIN_FAILED,
+6,C1001,2026-11-02T10:05:00+09:00,new-device-a,LOGIN_SUCCESS,true
+7,C1001,2026-11-02T10:07:00+09:00,new-device-b,LOGIN_SUCCESS,true

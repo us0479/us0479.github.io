@@ -138,6 +138,9 @@
       font-size: 14px;
     }
 
+    .project-actions { display:flex; flex-wrap:wrap; align-items:center; gap:14px; margin:24px 0 16px; }
+    .action-primary { display:inline-block; padding:11px 18px; border-radius:10px; background:#2563eb; color:white; font-weight:700; }
+    nav { flex-wrap:wrap; }
     @media (max-width: 640px) {
       header {
         align-items: flex-start;
@@ -168,6 +171,7 @@
       <nav aria-label="주요 메뉴">
         <a href="#project">프로젝트</a>
         <a href="#progress">개발 기록</a>
+        <a href="./bankwatch/">BankWatch 체험</a>
         <a
           href="https://github.com/us0479"
           target="_blank"
@@ -194,44 +198,60 @@
             직접 구현한 내용을 설명할 수 있는 개발을 목표로 합니다.
           </p>
           <p class="muted">
-            현재는 개인 홈페이지를 구성하고
-            데이터베이스 프로젝트의 직접 개발을 준비하고 있습니다.
+            BankWatch의 설계·구현과 실제 Windows 실행 검증을 마치고,
+            브라우저 체험판과 공개용 소스를 정리하고 있습니다.
           </p>
         </section>
 
         <section class="card" id="progress" aria-labelledby="progress-title">
           <h2 id="progress-title">개발 진행 상황</h2>
           <ol>
-            <li>Git 설치와 홈페이지 저장소 복제: 확인 완료</li>
-            <li>개인 홈페이지 첫 화면: 작성 중</li>
-            <li>BankWatch DB 설계와 직접 구현: 진행 예정</li>
+            <li>BankWatch v1.10: 8개 테이블·SQL·Java 앱·제출 문서 작성</li>
+            <li>실제 Windows 검증: PostgreSQL 통합 테스트 10개, 인증 HTTP 48요청·132검사 통과</li>
+            <li>GitHub Pages: 브라우저 체험판과 공개용 소스 제공</li>
           </ol>
         </section>
       </div>
 
       <section class="card" id="project" aria-labelledby="project-title">
-        <span class="label">직접 개발 준비</span>
+        <span class="label">BankWatch v1.10 · 실행 검증 완료</span>
         <h2 id="project-title">BankWatch</h2>
         <h3>모바일뱅킹 계정 이상접속 탐지 및 사고 대응 관리</h3>
 
         <p>
-          가상 고객의 접속 기록에서 이상 징후를 탐지하고,
-          경보의 근거와 사건 대응 이력을 관리하는 프로젝트입니다.
+          가상 모바일뱅킹 인증 서버가 확정한 성공·실패 로그를 CSV로 수집합니다.
+          R02는 같은 고객의 고정 10분 구간에서 신규 기기 로그인 성공보다 앞선 실패가 5건 이상이면 조사 후보로 찾습니다.
+          원본 근거, 담당자 선점, 사건 상태와 가상 계정 보호 상태, 대응 이력을 연결합니다.
         </p>
 
         <ul>
-          <li>구현 목표: 접속 로그 입력, 이상접속 탐지, 경보와 근거 조회</li>
-          <li>업무 흐름: 담당자 배정, 가상 계정 조치, 처리 이력 관리</li>
-          <li>학습 목표: PostgreSQL 설계, SQL, 트랜잭션과 동시성 검증</li>
+          <li>정상 7건: 후보 2개 · 대표 성공 ID 6 · 경보 1개 · 근거 6개 · 재탐지 신규 0개</li>
+          <li>업무 흐름: 관리자 입력·탐지, 담당자 선점·보호·종료, 관리자 보호 해제</li>
+          <li>실제 검증: PostgreSQL 16.16의 동시 선점·버전·입력/연결 중단 롤백·월별 파티션·실행 계획·교착 재시도</li>
         </ul>
 
+        <div class="project-actions" aria-label="BankWatch 자료">
+          <a class="action-primary" href="./bankwatch/">브라우저에서 체험하기 →</a>
+          <a href="./bankwatch/downloads/BankWatch-v1.10-public-source.zip" download>공개용 전체 소스 ZIP</a>
+          <a href="https://github.com/us0479/us0479.github.io/tree/main/bankwatch/source">소스 내용 보기</a>
+        </div>
         <p class="muted">
-          문서·소스·시연 링크는 직접 개발을 진행하며 추가할 예정입니다.
+          제출 문서:
+          <a href="./bankwatch/downloads/BankWatch_user-scenario.md" download>사용자 시나리오</a> ·
+          <a href="./bankwatch/downloads/BankWatch_erd.pdf">논리 ERD PDF</a> ·
+          <a href="./bankwatch/downloads/BankWatch_spec.xlsx" download>DB 명세 XLSX</a> ·
+          <a href="./bankwatch/downloads/BankWatch_data_dictionary.md" download>데이터 사전</a>
         </p>
-
+        <p class="muted">
+          <a href="./bankwatch/verification-summary.json">실제 앱 검증 요약</a> ·
+          <a href="./bankwatch/downloads/SHA256SUMS.txt">다운로드 체크섬</a> ·
+          <a href="https://github.com/us0479/bankwatch-db">제출용 비공개 저장소(접근 권한 필요)</a>
+        </p>
         <p class="notice">
-          현재 페이지는 프로젝트 소개용 정적 홈페이지입니다.
-          실제 데이터베이스 기능은 아직 연결하지 않았습니다.
+          GitHub Pages 체험판은 브라우저의 가상 데이터로 동작합니다.
+          Java 서버·PostgreSQL·실제 인증을 실행하는 서비스와 구분하며,
+          실제 Spring Boot·PostgreSQL 검증은 Windows 호스트 앱과 별도 DB에서 수행했습니다.
+          공개용 소스는 비공개 검증 원문과 비밀번호를 제외한 v1.10-public.1입니다.
         </p>
       </section>
     </main>

@@ -1,0 +1,311 @@
+{
+  "status": "PASS",
+  "scope": "GitHub Pages browser simulation only; does not execute Java/PostgreSQL",
+  "checks": 35,
+  "responses": 17,
+  "results": [
+    {
+      "name": "No real password collected",
+      "status": "PASS",
+      "actual": true,
+      "expected": true
+    },
+    {
+      "name": "UI normal7 rows",
+      "status": "PASS",
+      "actual": true,
+      "expected": true
+    },
+    {
+      "name": "UI invalid customer entire file cancelled",
+      "status": "PASS",
+      "actual": "{\"format\":1,\"customers\":[{\"account_id\":\"1\",\"customer_ref\":\"C1001\",\"display_name\":\"가상 고객 1\",\"lock_incident_id\":null},{\"account_id\":\"2\",\"customer_ref\":\"C1002\",\"display_name\":\"가상 고객 2\",\"lock_incident_id\":null},{\"account_id\":\"3\",\"customer_ref\":\"C1003\",\"display_name\":\"가상 고객 3\",\"lock_incident_id\":null}],\"events\":[{\"event_id\":\"1\",\"customer_ref\":\"C1001\",\"occurred_at\":\"2026-11-02T01:00:30.000000Z\",\"device_ref\":\"known-device\",\"event_type\":\"LOGIN_FAILED\",\"is_new_device\":null,\"account_id\":\"1\",\"customer_name\":\"가상 고객 1\",\"ingested_at\":\"2026-11-19T08:28:59.369Z\"},{\"event_id\":\"2\",\"customer_ref\":\"C1001\",\"occurred_at\":\"2026-11-02T01:01:00.000000Z\",\"device_ref\":\"known-device\",\"event_type\":\"LOGIN_FAILED\",\"is_new_device\":null,\"account_id\":\"1\",\"customer_name\":\"가상 고객 1\",\"ingested_at\":\"2026-11-19T08:28:59.369Z\"},{\"event_id\":\"3\",\"customer_ref\":\"C1001\",\"occurred_at\":\"2026-11-02T01:02:00.000000Z\",\"device_ref\":\"known-device\",\"event_type\":\"LOGIN_FAILED\",\"is_new_device\":null,\"account_id\":\"1\",\"customer_name\":\"가상 고객 1\",\"ingested_at\":\"2026-11-19T08:28:59.369Z\"},{\"event_id\":\"4\",\"customer_ref\":\"C1001\",\"occurred_at\":\"2026-11-02T01:03:00.000000Z\",\"device_ref\":\"known-device\",\"event_type\":\"LOGIN_FAILED\",\"is_new_device\":null,\"account_id\":\"1\",\"customer_name\":\"가상 고객 1\",\"ingested_at\":\"2026-11-19T08:28:59.369Z\"},{\"event_id\":\"5\",\"customer_ref\":\"C1001\",\"occurred_at\":\"2026-11-02T01:04:00.000000Z\",\"device_ref\":\"known-device\",\"event_type\":\"LOGIN_FAILED\",\"is_new_device\":null,\"account_id\":\"1\",\"customer_name\":\"가상 고객 1\",\"ingested_at\":\"2026-11-19T08:28:59.369Z\"},{\"event_id\":\"6\",\"customer_ref\":\"C1001\",\"occurred_at\":\"2026-11-02T01:05:00.000000Z\",\"device_ref\":\"new-device-a\",\"event_type\":\"LOGIN_SUCCESS\",\"is_new_device\":true,\"account_id\":\"1\",\"customer_name\":\"가상 고객 1\",\"ingested_at\":\"2026-11-19T08:28:59.369Z\"},{\"event_id\":\"7\",\"customer_ref\":\"C1001\",\"occurred_at\":\"2026-11-02T01:07:00.000000Z\",\"device_ref\":\"new-device-b\",\"event_type\":\"LOGIN_SUCCESS\",\"is_new_device\":true,\"account_id\":\"1\",\"customer_name\":\"가상 고객 1\",\"ingested_at\":\"2026-11-19T08:28:59.369Z\"}],\"alerts\":[],\"evidence\":[],\"incidents\":[],\"history\":[],\"seq\":{\"alert\":1,\"incident\":1,\"history\":1}}",
+      "expected": "{\"format\":1,\"customers\":[{\"account_id\":\"1\",\"customer_ref\":\"C1001\",\"display_name\":\"가상 고객 1\",\"lock_incident_id\":null},{\"account_id\":\"2\",\"customer_ref\":\"C1002\",\"display_name\":\"가상 고객 2\",\"lock_incident_id\":null},{\"account_id\":\"3\",\"customer_ref\":\"C1003\",\"display_name\":\"가상 고객 3\",\"lock_incident_id\":null}],\"events\":[{\"event_id\":\"1\",\"customer_ref\":\"C1001\",\"occurred_at\":\"2026-11-02T01:00:30.000000Z\",\"device_ref\":\"known-device\",\"event_type\":\"LOGIN_FAILED\",\"is_new_device\":null,\"account_id\":\"1\",\"customer_name\":\"가상 고객 1\",\"ingested_at\":\"2026-11-19T08:28:59.369Z\"},{\"event_id\":\"2\",\"customer_ref\":\"C1001\",\"occurred_at\":\"2026-11-02T01:01:00.000000Z\",\"device_ref\":\"known-device\",\"event_type\":\"LOGIN_FAILED\",\"is_new_device\":null,\"account_id\":\"1\",\"customer_name\":\"가상 고객 1\",\"ingested_at\":\"2026-11-19T08:28:59.369Z\"},{\"event_id\":\"3\",\"customer_ref\":\"C1001\",\"occurred_at\":\"2026-11-02T01:02:00.000000Z\",\"device_ref\":\"known-device\",\"event_type\":\"LOGIN_FAILED\",\"is_new_device\":null,\"account_id\":\"1\",\"customer_name\":\"가상 고객 1\",\"ingested_at\":\"2026-11-19T08:28:59.369Z\"},{\"event_id\":\"4\",\"customer_ref\":\"C1001\",\"occurred_at\":\"2026-11-02T01:03:00.000000Z\",\"device_ref\":\"known-device\",\"event_type\":\"LOGIN_FAILED\",\"is_new_device\":null,\"account_id\":\"1\",\"customer_name\":\"가상 고객 1\",\"ingested_at\":\"2026-11-19T08:28:59.369Z\"},{\"event_id\":\"5\",\"customer_ref\":\"C1001\",\"occurred_at\":\"2026-11-02T01:04:00.000000Z\",\"device_ref\":\"known-device\",\"event_type\":\"LOGIN_FAILED\",\"is_new_device\":null,\"account_id\":\"1\",\"customer_name\":\"가상 고객 1\",\"ingested_at\":\"2026-11-19T08:28:59.369Z\"},{\"event_id\":\"6\",\"customer_ref\":\"C1001\",\"occurred_at\":\"2026-11-02T01:05:00.000000Z\",\"device_ref\":\"new-device-a\",\"event_type\":\"LOGIN_SUCCESS\",\"is_new_device\":true,\"account_id\":\"1\",\"customer_name\":\"가상 고객 1\",\"ingested_at\":\"2026-11-19T08:28:59.369Z\"},{\"event_id\":\"7\",\"customer_ref\":\"C1001\",\"occurred_at\":\"2026-11-02T01:07:00.000000Z\",\"device_ref\":\"new-device-b\",\"event_type\":\"LOGIN_SUCCESS\",\"is_new_device\":true,\"account_id\":\"1\",\"customer_name\":\"가상 고객 1\",\"ingested_at\":\"2026-11-19T08:28:59.369Z\"}],\"alerts\":[],\"evidence\":[],\"incidents\":[],\"history\":[],\"seq\":{\"alert\":1,\"incident\":1,\"history\":1}}"
+    },
+    {
+      "name": "UI evidence6",
+      "status": "PASS",
+      "actual": 6,
+      "expected": 6
+    },
+    {
+      "name": "UI anchor6",
+      "status": "PASS",
+      "actual": "6",
+      "expected": "6"
+    },
+    {
+      "name": "UI redetection keeps evidence6",
+      "status": "PASS",
+      "actual": 6,
+      "expected": 6
+    },
+    {
+      "name": "UI locked/version1",
+      "status": "PASS",
+      "actual": [
+        "1",
+        1
+      ],
+      "expected": [
+        "1",
+        1
+      ]
+    },
+    {
+      "name": "UI other analyst has no close action",
+      "status": "PASS",
+      "actual": true,
+      "expected": true
+    },
+    {
+      "name": "UI normal final history4/version3/unlocked",
+      "status": "PASS",
+      "actual": [
+        4,
+        3,
+        null,
+        true
+      ],
+      "expected": [
+        4,
+        3,
+        null,
+        true
+      ]
+    },
+    {
+      "name": "UI correct history types",
+      "status": "PASS",
+      "actual": [
+        "CLAIM",
+        "LOCK_ACCOUNT",
+        "UNLOCK_ACCOUNT",
+        "CLOSE"
+      ],
+      "expected": [
+        "CLAIM",
+        "LOCK_ACCOUNT",
+        "UNLOCK_ACCOUNT",
+        "CLOSE"
+      ]
+    },
+    {
+      "name": "Mobile document has no horizontal overflow",
+      "status": "PASS",
+      "actual": true,
+      "expected": true
+    },
+    {
+      "name": "Anonymous /logs401",
+      "status": "PASS",
+      "actual": 401,
+      "expected": 401
+    },
+    {
+      "name": "Normal CSV result",
+      "status": "PASS",
+      "actual": {
+        "totalRows": 7,
+        "insertedRows": 7,
+        "duplicateRows": 0
+      },
+      "expected": {
+        "totalRows": 7,
+        "insertedRows": 7,
+        "duplicateRows": 0
+      }
+    },
+    {
+      "name": "Duplicate CSV result",
+      "status": "PASS",
+      "actual": {
+        "totalRows": 7,
+        "insertedRows": 0,
+        "duplicateRows": 7
+      },
+      "expected": {
+        "totalRows": 7,
+        "insertedRows": 0,
+        "duplicateRows": 7
+      }
+    },
+    {
+      "name": "R02 normal result",
+      "status": "PASS",
+      "actual": {
+        "candidateSuccesses": 2,
+        "candidateBuckets": 1,
+        "createdAlerts": 1,
+        "existingAlerts": 0,
+        "insertedEvidenceRows": 6
+      },
+      "expected": {
+        "candidateSuccesses": 2,
+        "candidateBuckets": 1,
+        "createdAlerts": 1,
+        "existingAlerts": 0,
+        "insertedEvidenceRows": 6
+      }
+    },
+    {
+      "name": "R02 redetection result",
+      "status": "PASS",
+      "actual": {
+        "candidateSuccesses": 2,
+        "candidateBuckets": 1,
+        "createdAlerts": 0,
+        "existingAlerts": 1,
+        "insertedEvidenceRows": 0
+      },
+      "expected": {
+        "candidateSuccesses": 2,
+        "candidateBuckets": 1,
+        "createdAlerts": 0,
+        "existingAlerts": 1,
+        "insertedEvidenceRows": 0
+      }
+    },
+    {
+      "name": "Two tabs different-role claim statuses",
+      "status": "PASS",
+      "actual": [
+        200,
+        409
+      ],
+      "expected": [
+        200,
+        409
+      ]
+    },
+    {
+      "name": "Winner two tab sessions version statuses",
+      "status": "PASS",
+      "actual": [
+        200,
+        409
+      ],
+      "expected": [
+        200,
+        409
+      ]
+    },
+    {
+      "name": "One protection persisted",
+      "status": "PASS",
+      "actual": [
+        1,
+        2
+      ],
+      "expected": [
+        1,
+        2
+      ]
+    },
+    {
+      "name": "Stale version rejected",
+      "status": "PASS",
+      "actual": 409,
+      "expected": 409
+    },
+    {
+      "name": "Stale version preserves all local business state",
+      "status": "PASS",
+      "actual": "{\"format\":1,\"customers\":[{\"account_id\":\"1\",\"customer_ref\":\"C1001\",\"display_name\":\"가상 고객 1\",\"lock_incident_id\":\"1\"},{\"account_id\":\"2\",\"customer_ref\":\"C1002\",\"display_name\":\"가상 고객 2\",\"lock_incident_id\":null},{\"account_id\":\"3\",\"customer_ref\":\"C1003\",\"display_name\":\"가상 고객 3\",\"lock_incident_id\":null}],\"events\":[{\"event_id\":\"1\",\"customer_ref\":\"C1001\",\"occurred_at\":\"2026-11-02T01:00:30.000000Z\",\"device_ref\":\"known-device\",\"event_type\":\"LOGIN_FAILED\",\"is_new_device\":null,\"account_id\":\"1\",\"customer_name\":\"가상 고객 1\",\"ingested_at\":\"2026-11-19T08:29:02.558Z\"},{\"event_id\":\"2\",\"customer_ref\":\"C1001\",\"occurred_at\":\"2026-11-02T01:01:00.000000Z\",\"device_ref\":\"known-device\",\"event_type\":\"LOGIN_FAILED\",\"is_new_device\":null,\"account_id\":\"1\",\"customer_name\":\"가상 고객 1\",\"ingested_at\":\"2026-11-19T08:29:02.558Z\"},{\"event_id\":\"3\",\"customer_ref\":\"C1001\",\"occurred_at\":\"2026-11-02T01:02:00.000000Z\",\"device_ref\":\"known-device\",\"event_type\":\"LOGIN_FAILED\",\"is_new_device\":null,\"account_id\":\"1\",\"customer_name\":\"가상 고객 1\",\"ingested_at\":\"2026-11-19T08:29:02.558Z\"},{\"event_id\":\"4\",\"customer_ref\":\"C1001\",\"occurred_at\":\"2026-11-02T01:03:00.000000Z\",\"device_ref\":\"known-device\",\"event_type\":\"LOGIN_FAILED\",\"is_new_device\":null,\"account_id\":\"1\",\"customer_name\":\"가상 고객 1\",\"ingested_at\":\"2026-11-19T08:29:02.558Z\"},{\"event_id\":\"5\",\"customer_ref\":\"C1001\",\"occurred_at\":\"2026-11-02T01:04:00.000000Z\",\"device_ref\":\"known-device\",\"event_type\":\"LOGIN_FAILED\",\"is_new_device\":null,\"account_id\":\"1\",\"customer_name\":\"가상 고객 1\",\"ingested_at\":\"2026-11-19T08:29:02.558Z\"},{\"event_id\":\"6\",\"customer_ref\":\"C1001\",\"occurred_at\":\"2026-11-02T01:05:00.000000Z\",\"device_ref\":\"new-device-a\",\"event_type\":\"LOGIN_SUCCESS\",\"is_new_device\":true,\"account_id\":\"1\",\"customer_name\":\"가상 고객 1\",\"ingested_at\":\"2026-11-19T08:29:02.558Z\"},{\"event_id\":\"7\",\"customer_ref\":\"C1001\",\"occurred_at\":\"2026-11-02T01:07:00.000000Z\",\"device_ref\":\"new-device-b\",\"event_type\":\"LOGIN_SUCCESS\",\"is_new_device\":true,\"account_id\":\"1\",\"customer_name\":\"가상 고객 1\",\"ingested_at\":\"2026-11-19T08:29:02.558Z\"}],\"alerts\":[{\"alert_id\":\"1\",\"account_id\":\"1\",\"rule_id\":\"1\",\"rule_code\":\"R02\",\"rule_name\":\"반복 실패 후 신규 기기 로그인\",\"bucket_start\":\"2026-11-02T01:00:00.000000Z\",\"bucket_end\":\"2026-11-02T01:10:00.000000Z\",\"detected_at\":\"2026-11-19T08:29:02.563Z\",\"dedup\":\"1|1793581200000000\"}],\"evidence\":[{\"alert_id\":\"1\",\"event_occurred_at\":\"2026-11-02T01:00:30.000000Z\",\"event_id\":\"1\",\"is_anchor\":false},{\"alert_id\":\"1\",\"event_occurred_at\":\"2026-11-02T01:01:00.000000Z\",\"event_id\":\"2\",\"is_anchor\":false},{\"alert_id\":\"1\",\"event_occurred_at\":\"2026-11-02T01:02:00.000000Z\",\"event_id\":\"3\",\"is_anchor\":false},{\"alert_id\":\"1\",\"event_occurred_at\":\"2026-11-02T01:03:00.000000Z\",\"event_id\":\"4\",\"is_anchor\":false},{\"alert_id\":\"1\",\"event_occurred_at\":\"2026-11-02T01:04:00.000000Z\",\"event_id\":\"5\",\"is_anchor\":false},{\"alert_id\":\"1\",\"event_occurred_at\":\"2026-11-02T01:05:00.000000Z\",\"event_id\":\"6\",\"is_anchor\":true}],\"incidents\":[{\"incident_id\":\"1\",\"alert_id\":\"1\",\"assignee_id\":\"3\",\"version\":1,\"created_at\":\"2026-11-19T08:29:02.568Z\",\"closed_at\":null,\"resolution\":null}],\"history\":[{\"history_id\":\"1\",\"incident_id\":\"1\",\"actor_id\":\"3\",\"actor_name\":\"체험 담당자 B\",\"action_type\":\"CLAIM\",\"reason\":\"체험 담당자로 배정\",\"created_at\":\"2026-11-19T08:29:02.569Z\"},{\"history_id\":\"2\",\"incident_id\":\"1\",\"actor_id\":\"3\",\"actor_name\":\"체험 담당자 B\",\"action_type\":\"LOCK_ACCOUNT\",\"reason\":\"tab1\",\"created_at\":\"2026-11-19T08:29:02.573Z\"}],\"seq\":{\"alert\":2,\"incident\":2,\"history\":3}}",
+      "expected": "{\"format\":1,\"customers\":[{\"account_id\":\"1\",\"customer_ref\":\"C1001\",\"display_name\":\"가상 고객 1\",\"lock_incident_id\":\"1\"},{\"account_id\":\"2\",\"customer_ref\":\"C1002\",\"display_name\":\"가상 고객 2\",\"lock_incident_id\":null},{\"account_id\":\"3\",\"customer_ref\":\"C1003\",\"display_name\":\"가상 고객 3\",\"lock_incident_id\":null}],\"events\":[{\"event_id\":\"1\",\"customer_ref\":\"C1001\",\"occurred_at\":\"2026-11-02T01:00:30.000000Z\",\"device_ref\":\"known-device\",\"event_type\":\"LOGIN_FAILED\",\"is_new_device\":null,\"account_id\":\"1\",\"customer_name\":\"가상 고객 1\",\"ingested_at\":\"2026-11-19T08:29:02.558Z\"},{\"event_id\":\"2\",\"customer_ref\":\"C1001\",\"occurred_at\":\"2026-11-02T01:01:00.000000Z\",\"device_ref\":\"known-device\",\"event_type\":\"LOGIN_FAILED\",\"is_new_device\":null,\"account_id\":\"1\",\"customer_name\":\"가상 고객 1\",\"ingested_at\":\"2026-11-19T08:29:02.558Z\"},{\"event_id\":\"3\",\"customer_ref\":\"C1001\",\"occurred_at\":\"2026-11-02T01:02:00.000000Z\",\"device_ref\":\"known-device\",\"event_type\":\"LOGIN_FAILED\",\"is_new_device\":null,\"account_id\":\"1\",\"customer_name\":\"가상 고객 1\",\"ingested_at\":\"2026-11-19T08:29:02.558Z\"},{\"event_id\":\"4\",\"customer_ref\":\"C1001\",\"occurred_at\":\"2026-11-02T01:03:00.000000Z\",\"device_ref\":\"known-device\",\"event_type\":\"LOGIN_FAILED\",\"is_new_device\":null,\"account_id\":\"1\",\"customer_name\":\"가상 고객 1\",\"ingested_at\":\"2026-11-19T08:29:02.558Z\"},{\"event_id\":\"5\",\"customer_ref\":\"C1001\",\"occurred_at\":\"2026-11-02T01:04:00.000000Z\",\"device_ref\":\"known-device\",\"event_type\":\"LOGIN_FAILED\",\"is_new_device\":null,\"account_id\":\"1\",\"customer_name\":\"가상 고객 1\",\"ingested_at\":\"2026-11-19T08:29:02.558Z\"},{\"event_id\":\"6\",\"customer_ref\":\"C1001\",\"occurred_at\":\"2026-11-02T01:05:00.000000Z\",\"device_ref\":\"new-device-a\",\"event_type\":\"LOGIN_SUCCESS\",\"is_new_device\":true,\"account_id\":\"1\",\"customer_name\":\"가상 고객 1\",\"ingested_at\":\"2026-11-19T08:29:02.558Z\"},{\"event_id\":\"7\",\"customer_ref\":\"C1001\",\"occurred_at\":\"2026-11-02T01:07:00.000000Z\",\"device_ref\":\"new-device-b\",\"event_type\":\"LOGIN_SUCCESS\",\"is_new_device\":true,\"account_id\":\"1\",\"customer_name\":\"가상 고객 1\",\"ingested_at\":\"2026-11-19T08:29:02.558Z\"}],\"alerts\":[{\"alert_id\":\"1\",\"account_id\":\"1\",\"rule_id\":\"1\",\"rule_code\":\"R02\",\"rule_name\":\"반복 실패 후 신규 기기 로그인\",\"bucket_start\":\"2026-11-02T01:00:00.000000Z\",\"bucket_end\":\"2026-11-02T01:10:00.000000Z\",\"detected_at\":\"2026-11-19T08:29:02.563Z\",\"dedup\":\"1|1793581200000000\"}],\"evidence\":[{\"alert_id\":\"1\",\"event_occurred_at\":\"2026-11-02T01:00:30.000000Z\",\"event_id\":\"1\",\"is_anchor\":false},{\"alert_id\":\"1\",\"event_occurred_at\":\"2026-11-02T01:01:00.000000Z\",\"event_id\":\"2\",\"is_anchor\":false},{\"alert_id\":\"1\",\"event_occurred_at\":\"2026-11-02T01:02:00.000000Z\",\"event_id\":\"3\",\"is_anchor\":false},{\"alert_id\":\"1\",\"event_occurred_at\":\"2026-11-02T01:03:00.000000Z\",\"event_id\":\"4\",\"is_anchor\":false},{\"alert_id\":\"1\",\"event_occurred_at\":\"2026-11-02T01:04:00.000000Z\",\"event_id\":\"5\",\"is_anchor\":false},{\"alert_id\":\"1\",\"event_occurred_at\":\"2026-11-02T01:05:00.000000Z\",\"event_id\":\"6\",\"is_anchor\":true}],\"incidents\":[{\"incident_id\":\"1\",\"alert_id\":\"1\",\"assignee_id\":\"3\",\"version\":1,\"created_at\":\"2026-11-19T08:29:02.568Z\",\"closed_at\":null,\"resolution\":null}],\"history\":[{\"history_id\":\"1\",\"incident_id\":\"1\",\"actor_id\":\"3\",\"actor_name\":\"체험 담당자 B\",\"action_type\":\"CLAIM\",\"reason\":\"체험 담당자로 배정\",\"created_at\":\"2026-11-19T08:29:02.569Z\"},{\"history_id\":\"2\",\"incident_id\":\"1\",\"actor_id\":\"3\",\"actor_name\":\"체험 담당자 B\",\"action_type\":\"LOCK_ACCOUNT\",\"reason\":\"tab1\",\"created_at\":\"2026-11-19T08:29:02.573Z\"}],\"seq\":{\"alert\":2,\"incident\":2,\"history\":3}}"
+    },
+    {
+      "name": "Close locked incident succeeds",
+      "status": "PASS",
+      "actual": 200,
+      "expected": 200
+    },
+    {
+      "name": "Closure keeps protection",
+      "status": "PASS",
+      "actual": [
+        true,
+        "1"
+      ],
+      "expected": [
+        true,
+        "1"
+      ]
+    },
+    {
+      "name": "Admin unlock after closure",
+      "status": "PASS",
+      "actual": "ACTIVE",
+      "expected": "ACTIVE"
+    },
+    {
+      "name": "Domain error400",
+      "status": "PASS",
+      "actual": 400,
+      "expected": 400
+    },
+    {
+      "name": "Domain error local rollback",
+      "status": "PASS",
+      "actual": "{\"format\":1,\"customers\":[{\"account_id\":\"1\",\"customer_ref\":\"C1001\",\"display_name\":\"가상 고객 1\",\"lock_incident_id\":null},{\"account_id\":\"2\",\"customer_ref\":\"C1002\",\"display_name\":\"가상 고객 2\",\"lock_incident_id\":null},{\"account_id\":\"3\",\"customer_ref\":\"C1003\",\"display_name\":\"가상 고객 3\",\"lock_incident_id\":null}],\"events\":[{\"event_id\":\"1\",\"customer_ref\":\"C1001\",\"occurred_at\":\"2026-11-02T01:00:30.000000Z\",\"device_ref\":\"known-device\",\"event_type\":\"LOGIN_FAILED\",\"is_new_device\":null,\"account_id\":\"1\",\"customer_name\":\"가상 고객 1\",\"ingested_at\":\"2026-11-19T08:29:02.558Z\"},{\"event_id\":\"2\",\"customer_ref\":\"C1001\",\"occurred_at\":\"2026-11-02T01:01:00.000000Z\",\"device_ref\":\"known-device\",\"event_type\":\"LOGIN_FAILED\",\"is_new_device\":null,\"account_id\":\"1\",\"customer_name\":\"가상 고객 1\",\"ingested_at\":\"2026-11-19T08:29:02.558Z\"},{\"event_id\":\"3\",\"customer_ref\":\"C1001\",\"occurred_at\":\"2026-11-02T01:02:00.000000Z\",\"device_ref\":\"known-device\",\"event_type\":\"LOGIN_FAILED\",\"is_new_device\":null,\"account_id\":\"1\",\"customer_name\":\"가상 고객 1\",\"ingested_at\":\"2026-11-19T08:29:02.558Z\"},{\"event_id\":\"4\",\"customer_ref\":\"C1001\",\"occurred_at\":\"2026-11-02T01:03:00.000000Z\",\"device_ref\":\"known-device\",\"event_type\":\"LOGIN_FAILED\",\"is_new_device\":null,\"account_id\":\"1\",\"customer_name\":\"가상 고객 1\",\"ingested_at\":\"2026-11-19T08:29:02.558Z\"},{\"event_id\":\"5\",\"customer_ref\":\"C1001\",\"occurred_at\":\"2026-11-02T01:04:00.000000Z\",\"device_ref\":\"known-device\",\"event_type\":\"LOGIN_FAILED\",\"is_new_device\":null,\"account_id\":\"1\",\"customer_name\":\"가상 고객 1\",\"ingested_at\":\"2026-11-19T08:29:02.558Z\"},{\"event_id\":\"6\",\"customer_ref\":\"C1001\",\"occurred_at\":\"2026-11-02T01:05:00.000000Z\",\"device_ref\":\"new-device-a\",\"event_type\":\"LOGIN_SUCCESS\",\"is_new_device\":true,\"account_id\":\"1\",\"customer_name\":\"가상 고객 1\",\"ingested_at\":\"2026-11-19T08:29:02.558Z\"},{\"event_id\":\"7\",\"customer_ref\":\"C1001\",\"occurred_at\":\"2026-11-02T01:07:00.000000Z\",\"device_ref\":\"new-device-b\",\"event_type\":\"LOGIN_SUCCESS\",\"is_new_device\":true,\"account_id\":\"1\",\"customer_name\":\"가상 고객 1\",\"ingested_at\":\"2026-11-19T08:29:02.558Z\"}],\"alerts\":[{\"alert_id\":\"1\",\"account_id\":\"1\",\"rule_id\":\"1\",\"rule_code\":\"R02\",\"rule_name\":\"반복 실패 후 신규 기기 로그인\",\"bucket_start\":\"2026-11-02T01:00:00.000000Z\",\"bucket_end\":\"2026-11-02T01:10:00.000000Z\",\"detected_at\":\"2026-11-19T08:29:02.563Z\",\"dedup\":\"1|1793581200000000\"}],\"evidence\":[{\"alert_id\":\"1\",\"event_occurred_at\":\"2026-11-02T01:00:30.000000Z\",\"event_id\":\"1\",\"is_anchor\":false},{\"alert_id\":\"1\",\"event_occurred_at\":\"2026-11-02T01:01:00.000000Z\",\"event_id\":\"2\",\"is_anchor\":false},{\"alert_id\":\"1\",\"event_occurred_at\":\"2026-11-02T01:02:00.000000Z\",\"event_id\":\"3\",\"is_anchor\":false},{\"alert_id\":\"1\",\"event_occurred_at\":\"2026-11-02T01:03:00.000000Z\",\"event_id\":\"4\",\"is_anchor\":false},{\"alert_id\":\"1\",\"event_occurred_at\":\"2026-11-02T01:04:00.000000Z\",\"event_id\":\"5\",\"is_anchor\":false},{\"alert_id\":\"1\",\"event_occurred_at\":\"2026-11-02T01:05:00.000000Z\",\"event_id\":\"6\",\"is_anchor\":true}],\"incidents\":[{\"incident_id\":\"1\",\"alert_id\":\"1\",\"assignee_id\":\"3\",\"version\":3,\"created_at\":\"2026-11-19T08:29:02.568Z\",\"closed_at\":\"2026-11-19T08:29:02.579Z\",\"resolution\":\"CONFIRMED\"}],\"history\":[{\"history_id\":\"1\",\"incident_id\":\"1\",\"actor_id\":\"3\",\"actor_name\":\"체험 담당자 B\",\"action_type\":\"CLAIM\",\"reason\":\"체험 담당자로 배정\",\"created_at\":\"2026-11-19T08:29:02.569Z\"},{\"history_id\":\"2\",\"incident_id\":\"1\",\"actor_id\":\"3\",\"actor_name\":\"체험 담당자 B\",\"action_type\":\"LOCK_ACCOUNT\",\"reason\":\"tab1\",\"created_at\":\"2026-11-19T08:29:02.573Z\"},{\"history_id\":\"3\",\"incident_id\":\"1\",\"actor_id\":\"3\",\"actor_name\":\"체험 담당자 B\",\"action_type\":\"CLOSE\",\"reason\":\"close\",\"created_at\":\"2026-11-19T08:29:02.579Z\"},{\"history_id\":\"4\",\"incident_id\":\"1\",\"actor_id\":\"1\",\"actor_name\":\"체험 관리자\",\"action_type\":\"UNLOCK_ACCOUNT\",\"reason\":\"verify\",\"created_at\":\"2026-11-19T08:29:02.582Z\"}],\"seq\":{\"alert\":2,\"incident\":2,\"history\":5}}",
+      "expected": "{\"format\":1,\"customers\":[{\"account_id\":\"1\",\"customer_ref\":\"C1001\",\"display_name\":\"가상 고객 1\",\"lock_incident_id\":null},{\"account_id\":\"2\",\"customer_ref\":\"C1002\",\"display_name\":\"가상 고객 2\",\"lock_incident_id\":null},{\"account_id\":\"3\",\"customer_ref\":\"C1003\",\"display_name\":\"가상 고객 3\",\"lock_incident_id\":null}],\"events\":[{\"event_id\":\"1\",\"customer_ref\":\"C1001\",\"occurred_at\":\"2026-11-02T01:00:30.000000Z\",\"device_ref\":\"known-device\",\"event_type\":\"LOGIN_FAILED\",\"is_new_device\":null,\"account_id\":\"1\",\"customer_name\":\"가상 고객 1\",\"ingested_at\":\"2026-11-19T08:29:02.558Z\"},{\"event_id\":\"2\",\"customer_ref\":\"C1001\",\"occurred_at\":\"2026-11-02T01:01:00.000000Z\",\"device_ref\":\"known-device\",\"event_type\":\"LOGIN_FAILED\",\"is_new_device\":null,\"account_id\":\"1\",\"customer_name\":\"가상 고객 1\",\"ingested_at\":\"2026-11-19T08:29:02.558Z\"},{\"event_id\":\"3\",\"customer_ref\":\"C1001\",\"occurred_at\":\"2026-11-02T01:02:00.000000Z\",\"device_ref\":\"known-device\",\"event_type\":\"LOGIN_FAILED\",\"is_new_device\":null,\"account_id\":\"1\",\"customer_name\":\"가상 고객 1\",\"ingested_at\":\"2026-11-19T08:29:02.558Z\"},{\"event_id\":\"4\",\"customer_ref\":\"C1001\",\"occurred_at\":\"2026-11-02T01:03:00.000000Z\",\"device_ref\":\"known-device\",\"event_type\":\"LOGIN_FAILED\",\"is_new_device\":null,\"account_id\":\"1\",\"customer_name\":\"가상 고객 1\",\"ingested_at\":\"2026-11-19T08:29:02.558Z\"},{\"event_id\":\"5\",\"customer_ref\":\"C1001\",\"occurred_at\":\"2026-11-02T01:04:00.000000Z\",\"device_ref\":\"known-device\",\"event_type\":\"LOGIN_FAILED\",\"is_new_device\":null,\"account_id\":\"1\",\"customer_name\":\"가상 고객 1\",\"ingested_at\":\"2026-11-19T08:29:02.558Z\"},{\"event_id\":\"6\",\"customer_ref\":\"C1001\",\"occurred_at\":\"2026-11-02T01:05:00.000000Z\",\"device_ref\":\"new-device-a\",\"event_type\":\"LOGIN_SUCCESS\",\"is_new_device\":true,\"account_id\":\"1\",\"customer_name\":\"가상 고객 1\",\"ingested_at\":\"2026-11-19T08:29:02.558Z\"},{\"event_id\":\"7\",\"customer_ref\":\"C1001\",\"occurred_at\":\"2026-11-02T01:07:00.000000Z\",\"device_ref\":\"new-device-b\",\"event_type\":\"LOGIN_SUCCESS\",\"is_new_device\":true,\"account_id\":\"1\",\"customer_name\":\"가상 고객 1\",\"ingested_at\":\"2026-11-19T08:29:02.558Z\"}],\"alerts\":[{\"alert_id\":\"1\",\"account_id\":\"1\",\"rule_id\":\"1\",\"rule_code\":\"R02\",\"rule_name\":\"반복 실패 후 신규 기기 로그인\",\"bucket_start\":\"2026-11-02T01:00:00.000000Z\",\"bucket_end\":\"2026-11-02T01:10:00.000000Z\",\"detected_at\":\"2026-11-19T08:29:02.563Z\",\"dedup\":\"1|1793581200000000\"}],\"evidence\":[{\"alert_id\":\"1\",\"event_occurred_at\":\"2026-11-02T01:00:30.000000Z\",\"event_id\":\"1\",\"is_anchor\":false},{\"alert_id\":\"1\",\"event_occurred_at\":\"2026-11-02T01:01:00.000000Z\",\"event_id\":\"2\",\"is_anchor\":false},{\"alert_id\":\"1\",\"event_occurred_at\":\"2026-11-02T01:02:00.000000Z\",\"event_id\":\"3\",\"is_anchor\":false},{\"alert_id\":\"1\",\"event_occurred_at\":\"2026-11-02T01:03:00.000000Z\",\"event_id\":\"4\",\"is_anchor\":false},{\"alert_id\":\"1\",\"event_occurred_at\":\"2026-11-02T01:04:00.000000Z\",\"event_id\":\"5\",\"is_anchor\":false},{\"alert_id\":\"1\",\"event_occurred_at\":\"2026-11-02T01:05:00.000000Z\",\"event_id\":\"6\",\"is_anchor\":true}],\"incidents\":[{\"incident_id\":\"1\",\"alert_id\":\"1\",\"assignee_id\":\"3\",\"version\":3,\"created_at\":\"2026-11-19T08:29:02.568Z\",\"closed_at\":\"2026-11-19T08:29:02.579Z\",\"resolution\":\"CONFIRMED\"}],\"history\":[{\"history_id\":\"1\",\"incident_id\":\"1\",\"actor_id\":\"3\",\"actor_name\":\"체험 담당자 B\",\"action_type\":\"CLAIM\",\"reason\":\"체험 담당자로 배정\",\"created_at\":\"2026-11-19T08:29:02.569Z\"},{\"history_id\":\"2\",\"incident_id\":\"1\",\"actor_id\":\"3\",\"actor_name\":\"체험 담당자 B\",\"action_type\":\"LOCK_ACCOUNT\",\"reason\":\"tab1\",\"created_at\":\"2026-11-19T08:29:02.573Z\"},{\"history_id\":\"3\",\"incident_id\":\"1\",\"actor_id\":\"3\",\"actor_name\":\"체험 담당자 B\",\"action_type\":\"CLOSE\",\"reason\":\"close\",\"created_at\":\"2026-11-19T08:29:02.579Z\"},{\"history_id\":\"4\",\"incident_id\":\"1\",\"actor_id\":\"1\",\"actor_name\":\"체험 관리자\",\"action_type\":\"UNLOCK_ACCOUNT\",\"reason\":\"verify\",\"created_at\":\"2026-11-19T08:29:02.582Z\"}],\"seq\":{\"alert\":2,\"incident\":2,\"history\":5}}"
+    },
+    {
+      "name": "Content conflict400",
+      "status": "PASS",
+      "actual": 400,
+      "expected": 400
+    },
+    {
+      "name": "Content conflict local rollback",
+      "status": "PASS",
+      "actual": "{\"format\":1,\"customers\":[{\"account_id\":\"1\",\"customer_ref\":\"C1001\",\"display_name\":\"가상 고객 1\",\"lock_incident_id\":null},{\"account_id\":\"2\",\"customer_ref\":\"C1002\",\"display_name\":\"가상 고객 2\",\"lock_incident_id\":null},{\"account_id\":\"3\",\"customer_ref\":\"C1003\",\"display_name\":\"가상 고객 3\",\"lock_incident_id\":null}],\"events\":[{\"event_id\":\"1\",\"customer_ref\":\"C1001\",\"occurred_at\":\"2026-11-02T01:00:30.000000Z\",\"device_ref\":\"known-device\",\"event_type\":\"LOGIN_FAILED\",\"is_new_device\":null,\"account_id\":\"1\",\"customer_name\":\"가상 고객 1\",\"ingested_at\":\"2026-11-19T08:29:02.558Z\"},{\"event_id\":\"2\",\"customer_ref\":\"C1001\",\"occurred_at\":\"2026-11-02T01:01:00.000000Z\",\"device_ref\":\"known-device\",\"event_type\":\"LOGIN_FAILED\",\"is_new_device\":null,\"account_id\":\"1\",\"customer_name\":\"가상 고객 1\",\"ingested_at\":\"2026-11-19T08:29:02.558Z\"},{\"event_id\":\"3\",\"customer_ref\":\"C1001\",\"occurred_at\":\"2026-11-02T01:02:00.000000Z\",\"device_ref\":\"known-device\",\"event_type\":\"LOGIN_FAILED\",\"is_new_device\":null,\"account_id\":\"1\",\"customer_name\":\"가상 고객 1\",\"ingested_at\":\"2026-11-19T08:29:02.558Z\"},{\"event_id\":\"4\",\"customer_ref\":\"C1001\",\"occurred_at\":\"2026-11-02T01:03:00.000000Z\",\"device_ref\":\"known-device\",\"event_type\":\"LOGIN_FAILED\",\"is_new_device\":null,\"account_id\":\"1\",\"customer_name\":\"가상 고객 1\",\"ingested_at\":\"2026-11-19T08:29:02.558Z\"},{\"event_id\":\"5\",\"customer_ref\":\"C1001\",\"occurred_at\":\"2026-11-02T01:04:00.000000Z\",\"device_ref\":\"known-device\",\"event_type\":\"LOGIN_FAILED\",\"is_new_device\":null,\"account_id\":\"1\",\"customer_name\":\"가상 고객 1\",\"ingested_at\":\"2026-11-19T08:29:02.558Z\"},{\"event_id\":\"6\",\"customer_ref\":\"C1001\",\"occurred_at\":\"2026-11-02T01:05:00.000000Z\",\"device_ref\":\"new-device-a\",\"event_type\":\"LOGIN_SUCCESS\",\"is_new_device\":true,\"account_id\":\"1\",\"customer_name\":\"가상 고객 1\",\"ingested_at\":\"2026-11-19T08:29:02.558Z\"},{\"event_id\":\"7\",\"customer_ref\":\"C1001\",\"occurred_at\":\"2026-11-02T01:07:00.000000Z\",\"device_ref\":\"new-device-b\",\"event_type\":\"LOGIN_SUCCESS\",\"is_new_device\":true,\"account_id\":\"1\",\"customer_name\":\"가상 고객 1\",\"ingested_at\":\"2026-11-19T08:29:02.558Z\"}],\"alerts\":[{\"alert_id\":\"1\",\"account_id\":\"1\",\"rule_id\":\"1\",\"rule_code\":\"R02\",\"rule_name\":\"반복 실패 후 신규 기기 로그인\",\"bucket_start\":\"2026-11-02T01:00:00.000000Z\",\"bucket_end\":\"2026-11-02T01:10:00.000000Z\",\"detected_at\":\"2026-11-19T08:29:02.563Z\",\"dedup\":\"1|1793581200000000\"}],\"evidence\":[{\"alert_id\":\"1\",\"event_occurred_at\":\"2026-11-02T01:00:30.000000Z\",\"event_id\":\"1\",\"is_anchor\":false},{\"alert_id\":\"1\",\"event_occurred_at\":\"2026-11-02T01:01:00.000000Z\",\"event_id\":\"2\",\"is_anchor\":false},{\"alert_id\":\"1\",\"event_occurred_at\":\"2026-11-02T01:02:00.000000Z\",\"event_id\":\"3\",\"is_anchor\":false},{\"alert_id\":\"1\",\"event_occurred_at\":\"2026-11-02T01:03:00.000000Z\",\"event_id\":\"4\",\"is_anchor\":false},{\"alert_id\":\"1\",\"event_occurred_at\":\"2026-11-02T01:04:00.000000Z\",\"event_id\":\"5\",\"is_anchor\":false},{\"alert_id\":\"1\",\"event_occurred_at\":\"2026-11-02T01:05:00.000000Z\",\"event_id\":\"6\",\"is_anchor\":true}],\"incidents\":[{\"incident_id\":\"1\",\"alert_id\":\"1\",\"assignee_id\":\"3\",\"version\":3,\"created_at\":\"2026-11-19T08:29:02.568Z\",\"closed_at\":\"2026-11-19T08:29:02.579Z\",\"resolution\":\"CONFIRMED\"}],\"history\":[{\"history_id\":\"1\",\"incident_id\":\"1\",\"actor_id\":\"3\",\"actor_name\":\"체험 담당자 B\",\"action_type\":\"CLAIM\",\"reason\":\"체험 담당자로 배정\",\"created_at\":\"2026-11-19T08:29:02.569Z\"},{\"history_id\":\"2\",\"incident_id\":\"1\",\"actor_id\":\"3\",\"actor_name\":\"체험 담당자 B\",\"action_type\":\"LOCK_ACCOUNT\",\"reason\":\"tab1\",\"created_at\":\"2026-11-19T08:29:02.573Z\"},{\"history_id\":\"3\",\"incident_id\":\"1\",\"actor_id\":\"3\",\"actor_name\":\"체험 담당자 B\",\"action_type\":\"CLOSE\",\"reason\":\"close\",\"created_at\":\"2026-11-19T08:29:02.579Z\"},{\"history_id\":\"4\",\"incident_id\":\"1\",\"actor_id\":\"1\",\"actor_name\":\"체험 관리자\",\"action_type\":\"UNLOCK_ACCOUNT\",\"reason\":\"verify\",\"created_at\":\"2026-11-19T08:29:02.582Z\"}],\"seq\":{\"alert\":2,\"incident\":2,\"history\":5}}",
+      "expected": "{\"format\":1,\"customers\":[{\"account_id\":\"1\",\"customer_ref\":\"C1001\",\"display_name\":\"가상 고객 1\",\"lock_incident_id\":null},{\"account_id\":\"2\",\"customer_ref\":\"C1002\",\"display_name\":\"가상 고객 2\",\"lock_incident_id\":null},{\"account_id\":\"3\",\"customer_ref\":\"C1003\",\"display_name\":\"가상 고객 3\",\"lock_incident_id\":null}],\"events\":[{\"event_id\":\"1\",\"customer_ref\":\"C1001\",\"occurred_at\":\"2026-11-02T01:00:30.000000Z\",\"device_ref\":\"known-device\",\"event_type\":\"LOGIN_FAILED\",\"is_new_device\":null,\"account_id\":\"1\",\"customer_name\":\"가상 고객 1\",\"ingested_at\":\"2026-11-19T08:29:02.558Z\"},{\"event_id\":\"2\",\"customer_ref\":\"C1001\",\"occurred_at\":\"2026-11-02T01:01:00.000000Z\",\"device_ref\":\"known-device\",\"event_type\":\"LOGIN_FAILED\",\"is_new_device\":null,\"account_id\":\"1\",\"customer_name\":\"가상 고객 1\",\"ingested_at\":\"2026-11-19T08:29:02.558Z\"},{\"event_id\":\"3\",\"customer_ref\":\"C1001\",\"occurred_at\":\"2026-11-02T01:02:00.000000Z\",\"device_ref\":\"known-device\",\"event_type\":\"LOGIN_FAILED\",\"is_new_device\":null,\"account_id\":\"1\",\"customer_name\":\"가상 고객 1\",\"ingested_at\":\"2026-11-19T08:29:02.558Z\"},{\"event_id\":\"4\",\"customer_ref\":\"C1001\",\"occurred_at\":\"2026-11-02T01:03:00.000000Z\",\"device_ref\":\"known-device\",\"event_type\":\"LOGIN_FAILED\",\"is_new_device\":null,\"account_id\":\"1\",\"customer_name\":\"가상 고객 1\",\"ingested_at\":\"2026-11-19T08:29:02.558Z\"},{\"event_id\":\"5\",\"customer_ref\":\"C1001\",\"occurred_at\":\"2026-11-02T01:04:00.000000Z\",\"device_ref\":\"known-device\",\"event_type\":\"LOGIN_FAILED\",\"is_new_device\":null,\"account_id\":\"1\",\"customer_name\":\"가상 고객 1\",\"ingested_at\":\"2026-11-19T08:29:02.558Z\"},{\"event_id\":\"6\",\"customer_ref\":\"C1001\",\"occurred_at\":\"2026-11-02T01:05:00.000000Z\",\"device_ref\":\"new-device-a\",\"event_type\":\"LOGIN_SUCCESS\",\"is_new_device\":true,\"account_id\":\"1\",\"customer_name\":\"가상 고객 1\",\"ingested_at\":\"2026-11-19T08:29:02.558Z\"},{\"event_id\":\"7\",\"customer_ref\":\"C1001\",\"occurred_at\":\"2026-11-02T01:07:00.000000Z\",\"device_ref\":\"new-device-b\",\"event_type\":\"LOGIN_SUCCESS\",\"is_new_device\":true,\"account_id\":\"1\",\"customer_name\":\"가상 고객 1\",\"ingested_at\":\"2026-11-19T08:29:02.558Z\"}],\"alerts\":[{\"alert_id\":\"1\",\"account_id\":\"1\",\"rule_id\":\"1\",\"rule_code\":\"R02\",\"rule_name\":\"반복 실패 후 신규 기기 로그인\",\"bucket_start\":\"2026-11-02T01:00:00.000000Z\",\"bucket_end\":\"2026-11-02T01:10:00.000000Z\",\"detected_at\":\"2026-11-19T08:29:02.563Z\",\"dedup\":\"1|1793581200000000\"}],\"evidence\":[{\"alert_id\":\"1\",\"event_occurred_at\":\"2026-11-02T01:00:30.000000Z\",\"event_id\":\"1\",\"is_anchor\":false},{\"alert_id\":\"1\",\"event_occurred_at\":\"2026-11-02T01:01:00.000000Z\",\"event_id\":\"2\",\"is_anchor\":false},{\"alert_id\":\"1\",\"event_occurred_at\":\"2026-11-02T01:02:00.000000Z\",\"event_id\":\"3\",\"is_anchor\":false},{\"alert_id\":\"1\",\"event_occurred_at\":\"2026-11-02T01:03:00.000000Z\",\"event_id\":\"4\",\"is_anchor\":false},{\"alert_id\":\"1\",\"event_occurred_at\":\"2026-11-02T01:04:00.000000Z\",\"event_id\":\"5\",\"is_anchor\":false},{\"alert_id\":\"1\",\"event_occurred_at\":\"2026-11-02T01:05:00.000000Z\",\"event_id\":\"6\",\"is_anchor\":true}],\"incidents\":[{\"incident_id\":\"1\",\"alert_id\":\"1\",\"assignee_id\":\"3\",\"version\":3,\"created_at\":\"2026-11-19T08:29:02.568Z\",\"closed_at\":\"2026-11-19T08:29:02.579Z\",\"resolution\":\"CONFIRMED\"}],\"history\":[{\"history_id\":\"1\",\"incident_id\":\"1\",\"actor_id\":\"3\",\"actor_name\":\"체험 담당자 B\",\"action_type\":\"CLAIM\",\"reason\":\"체험 담당자로 배정\",\"created_at\":\"2026-11-19T08:29:02.569Z\"},{\"history_id\":\"2\",\"incident_id\":\"1\",\"actor_id\":\"3\",\"actor_name\":\"체험 담당자 B\",\"action_type\":\"LOCK_ACCOUNT\",\"reason\":\"tab1\",\"created_at\":\"2026-11-19T08:29:02.573Z\"},{\"history_id\":\"3\",\"incident_id\":\"1\",\"actor_id\":\"3\",\"actor_name\":\"체험 담당자 B\",\"action_type\":\"CLOSE\",\"reason\":\"close\",\"created_at\":\"2026-11-19T08:29:02.579Z\"},{\"history_id\":\"4\",\"incident_id\":\"1\",\"actor_id\":\"1\",\"actor_name\":\"체험 관리자\",\"action_type\":\"UNLOCK_ACCOUNT\",\"reason\":\"verify\",\"created_at\":\"2026-11-19T08:29:02.582Z\"}],\"seq\":{\"alert\":2,\"incident\":2,\"history\":5}}"
+    },
+    {
+      "name": "Boundary41 import",
+      "status": "PASS",
+      "actual": 41,
+      "expected": 41
+    },
+    {
+      "name": "Boundary candidates0",
+      "status": "PASS",
+      "actual": 0,
+      "expected": 0
+    },
+    {
+      "name": "Microseconds import",
+      "status": "PASS",
+      "actual": 200,
+      "expected": 200
+    },
+    {
+      "name": "Same-time failures excluded at microsecond precision",
+      "status": "PASS",
+      "actual": 1,
+      "expected": 1
+    },
+    {
+      "name": "First strictly later success is anchor7",
+      "status": "PASS",
+      "actual": "7",
+      "expected": "7"
+    },
+    {
+      "name": "Bigint same-time representative ordering",
+      "status": "PASS",
+      "actual": "9007199254740992",
+      "expected": "9007199254740992"
+    },
+    {
+      "name": "No browser JS errors",
+      "status": "PASS",
+      "actual": [],
+      "expected": []
+    }
+  ],
+  "errors": [],
+  "checked_on_kst": "2026-11-19",
+  "target": "Chromium desktop1440/mobile375; Pages simulation only"
+}

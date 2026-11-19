@@ -1,0 +1,68 @@
+# 기존 pgdata의 DB 이름과 볼륨을 유지한다. 이 파일은 기존 DB를 삭제하거나 이관하지 않는다.
+# 준비 순서: DB 초기화(SQL 3개) → OperatorBootstrap 성공 → 앱 기동.
+# 초기 운영자 비밀번호 3개는 로컬 환경 또는 .env에서 제공한다.
+services:
+  db:
+    image: postgres:16.15
+    environment:
+      POSTGRES_DB: bankwatch
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: ${OWNER_DB_PASSWORD:?Set OWNER_DB_PASSWORD locally}
+      APP_DB_PASSWORD: ${APP_DB_PASSWORD:?Set APP_DB_PASSWORD locally}
+      TZ: Asia/Seoul
+    volumes:
+      - pgdata:/var/lib/postgresql/data
+      - ./db:/project/sql-source:ro
+      - ./scripts/init-db.sh:/project/init-db.sh:ro
+    # 읽기 전용 원본은 보존하고, 추출 파일 권한과 무관하게 postgres가 읽을 사본을 준비한다.
+    entrypoint: ["/bin/bash", "-ec"]
+    command:
+      - |
+        mkdir -p /project/db
+        for sql_file in schema.sql seed.sql grant_runtime.sql; do
+          install -m 0644 "/project/sql-source/$$sql_file" "/project/db/$$sql_file"
+        done
+        install -m 0644 /project/init-db.sh /docker-entrypoint-initdb.d/01-bankwatch.sh
+        exec /usr/local/bin/docker-entrypoint.sh postgres
+    healthcheck:
+      # 초기화 중의 임시 Unix 소켓 서버를 준비 완료로 판단하지 않는다.
+      test: ["CMD", "pg_isready", "-h", "127.0.0.1", "-U", "postgres", "-d", "bankwatch"]
+      interval: 3s
+      timeout: 3s
+      retries: 20
+  bootstrap:
+    build: .
+    depends_on:
+      db:
+        condition: service_healthy
+    restart: "no"
+    entrypoint:
+      - java
+      - -Dloader.main=kr.ac.bankwatch.OperatorBootstrap
+      - -cp
+      - /app/app.jar
+      - org.springframework.boot.loader.launch.PropertiesLauncher
+    environment:
+      BANKWATCH_DB_URL: jdbc:postgresql://db:5432/bankwatch
+      BANKWATCH_BOOTSTRAP_DB_USER: postgres
+      BANKWATCH_BOOTSTRAP_DB_PASSWORD: ${OWNER_DB_PASSWORD:?Set OWNER_DB_PASSWORD locally}
+      BANKWATCH_ADMIN_PASSWORD: ${BANKWATCH_ADMIN_PASSWORD:?Set BANKWATCH_ADMIN_PASSWORD locally}
+      BANKWATCH_ANALYST_A_PASSWORD: ${BANKWATCH_ANALYST_A_PASSWORD:?Set BANKWATCH_ANALYST_A_PASSWORD locally}
+      BANKWATCH_ANALYST_B_PASSWORD: ${BANKWATCH_ANALYST_B_PASSWORD:?Set BANKWATCH_ANALYST_B_PASSWORD locally}
+      TZ: Asia/Seoul
+  app:
+    build: .
+    depends_on:
+      db:
+        condition: service_healthy
+      bootstrap:
+        condition: service_completed_successfully
+    ports:
+      - "127.0.0.1:${BANKWATCH_PORT:-8080}:8080"
+    environment:
+      BANKWATCH_DB_URL: jdbc:postgresql://db:5432/bankwatch
+      BANKWATCH_DB_USER: bankwatch_app
+      BANKWATCH_DB_PASSWORD: ${APP_DB_PASSWORD:?Set APP_DB_PASSWORD locally}
+      TZ: Asia/Seoul
+volumes:
+  pgdata:

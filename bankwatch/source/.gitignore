@@ -1,0 +1,44 @@
+# Local environment and private files
+.env
+.env.*
+!.env.example
+private/
+secrets/
+.local/
+application-local.*
+*.pem
+*.key
+*.p12
+*.pfx
+*.jks
+
+# Editor settings
+.vscode/
+.idea/
+
+# Dependencies and generated files
+node_modules/
+.gradle/
+build/
+target/
+dist/
+
+# Maintained UI source files in the root dist directory
+!/dist/
+/dist/*
+!/dist/app.css
+!/dist/app.js
+!/dist/index.html
+*.class
+
+# Logs and temporary files
+*.log
+*.tmp
+*.bak
+tmp/
+output/
+
+# Operating system files
+Thumbs.db
+Desktop.ini
+.DS_Store

@@ -1,0 +1,92 @@
+{
+  "project": "BankWatch",
+  "official_version": "v1.10",
+  "public_edition": "v1.10-public.1",
+  "submission_date": "2026-11-29",
+  "checked_on_kst": "2026-11-19",
+  "data": "Synthetic authentication server results only",
+  "actual_backend": {
+    "platform": "Windows 11",
+    "java": "21.0.12.1",
+    "spring_boot": "4.1.2",
+    "maven": "3.9.16",
+    "postgresql": "16.16",
+    "deployment": "Windows JAR plus separate Docker Linux PostgreSQL"
+  },
+  "standard_build": {
+    "validate": "PASS",
+    "clean_package": "PASS",
+    "PostgreSQL_tests_executed": 0
+  },
+  "integration": {
+    "profile": "postgres-it",
+    "tests": 10,
+    "failures": 0,
+    "errors": 0,
+    "skipped": 0,
+    "status": "PASS"
+  },
+  "authenticated_HTTP": {
+    "requests": 48,
+    "checks": 132,
+    "status": "PASS"
+  },
+  "scenarios": {
+    "SC01": "candidates2 / anchor6 / alert1 / evidence6 / redetection new0",
+    "SC02": "Two analysts claim200/409, two winner sessions protect200/409; each COMMIT1/ROLLBACK1; stale409",
+    "SC03": "Successful INSERT8 before missing-customer lookup400; all business rows rolled back; INSERT9 not attempted",
+    "SC04": "Actual backend termination before COMMIT ->503/full rollback; no automatic retry; explicit new request succeeds"
+  },
+  "plans": {
+    "dataset": 30000,
+    "per_month": 10000,
+    "partition_counts_before_on_off_after_index": [
+      1,
+      3,
+      1
+    ],
+    "result_rows_equal": true,
+    "candidate_index_removed": true,
+    "speed_guarantee": false
+  },
+  "concurrency": {
+    "actual_deadlock_SQLSTATE": "40P01",
+    "fresh_whole_transaction_retry": "PASS"
+  },
+  "code_model": {
+    "tables": 8,
+    "columns": 44,
+    "requirements": 10,
+    "features": 4,
+    "functions": 10,
+    "queries": 23,
+    "test_ids": 11
+  },
+  "original_tested_jar_sha256": "e637c843e33491aab5708817f03547cde7055c38b1e7c575550202734c632ee5",
+  "browser_demo": {
+    "mode": "PAGES_DEMO",
+    "storage": "Browser IndexedDB / tab sessionStorage",
+    "actual_Java_PostgreSQL_execution": false,
+    "authentication": "Role selection; no real credentials",
+    "server_lock_rollback_deadlock_tests": false,
+    "local_browser_verification": {
+      "status": "PASS",
+      "checks": 35,
+      "js_errors": 0,
+      "details": "demo-test-report.json",
+      "scope": "browser simulation, separate from actual PostgreSQL tests"
+    }
+  },
+  "raw_execution_evidence_included": false,
+  "private_submission_archive_unchanged": true,
+  "scope": "User-uploaded Windows B1/B2 and C1 reports reviewed. Public summary is not the private raw validation archive. Test/request/check counts are separate.",
+  "public_source_package": {
+    "edition": "v1.10-public.1",
+    "bytes": 453166,
+    "sha256": "0e0b5e02fdd95c02ce5295de0a1d32d32539d767aa3edad1aae61806113ce015",
+    "entries": 54,
+    "private_raw_logs_included": false,
+    "runtime37_matches_verified_app": true,
+    "local_maven_validate": "PASS, Java21, PostgreSQL tests not rerun"
+  }
+}
