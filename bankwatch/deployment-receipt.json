@@ -1,0 +1,137 @@
+{
+  "status": "PASS_PUBLISHED_AND_VERIFIED",
+  "date_kst": "2026-11-19",
+  "project": "BankWatch",
+  "release": "v1.11",
+  "private_source": {
+    "repository": "us0479/bankwatch-db",
+    "branch": "main",
+    "commit": "c8092b23d475bf501f69f52f253350dbd74d9aa1",
+    "push": "PASS",
+    "CI_conclusion": "success",
+    "CI_url": "https://github.com/us0479/bankwatch-db/actions/runs/44530792651"
+  },
+  "private_download": {
+    "status": "PASS",
+    "bytes": 2727812,
+    "sha256": "83cce0837c1d88fd4fc2d3dced310f211aa836a89840214b4773e1c1cc501542",
+    "repository": "us0479/bankwatch-db",
+    "ref": "bankwatch-download-f897bf03224e",
+    "path": "downloads/final-v1.11/BankWatch-v1.11-final-private.zip",
+    "method": "Authenticated GitHub Git Blob API base64 decoded; binary raw media blocked by connector transform"
+  },
+  "Pages": {
+    "repository": "us0479/us0479.github.io",
+    "branch": "main",
+    "content_commit": "6afb2f85bff7dacaeeb78d7a5f679ea8d587ba68",
+    "build_status": "built",
+    "receipt_publication": "This receipt and README links are a following metadata-only commit; query current main for its SHA.",
+    "homepage": "https://us0479.github.io/",
+    "demo": "https://us0479.github.io/bankwatch/",
+    "live_browser": {
+      "status": "PASS",
+      "checks": 35,
+      "errors": []
+    },
+    "TLS_check_scope": "Python HTTPS downloads used system CA verification; Chromium live UI used managed-proxy certificate accommodation, not a site TLS bypass for users.",
+    "downloads": {
+      "status": "PASS",
+      "results": [
+        {
+          "file": "BankWatch-v1.11-final-public.zip",
+          "status": 200,
+          "bytes": 847641,
+          "sha256": "62055eeeee6e436b63607255c7e61acc15f5e555fd4b827596ee4fe7ccfa8903"
+        },
+        {
+          "file": "BankWatch-v1.11-public-source.zip",
+          "status": 200,
+          "bytes": 501167,
+          "sha256": "dc02a5ee4d03147dc6f041ac812925c6ce10376466018569815a1da6ccd72d3a"
+        },
+        {
+          "file": "BankWatch_user-scenario.md",
+          "status": 200,
+          "bytes": 52073,
+          "sha256": "ff460236226db9af14f1ea58bbedf1ce4f5ae4ea0e74aa39014a56614bbd6839"
+        },
+        {
+          "file": "BankWatch_erd.pdf",
+          "status": 200,
+          "bytes": 235877,
+          "sha256": "b77b8a3a113b042a71b0549c64065de5e466dd6cddc2bd97fd93d56677aff622"
+        },
+        {
+          "file": "BankWatch_spec.xlsx",
+          "status": 200,
+          "bytes": 83958,
+          "sha256": "9005fd3abd6f37b5808c0ec4b510478d2ea085bdff082e34e9f7e5197a86a9f6"
+        },
+        {
+          "file": "BankWatch_Claude_Presentation_Prompt.md",
+          "status": 200,
+          "bytes": 12161,
+          "sha256": "a28a1be616a0eec0201b6ebcb25bb4222dd75b8524f988f37cde5f94df3f7588"
+        },
+        {
+          "file": "PRESENTATION_INPUT_GUIDE.md",
+          "status": 200,
+          "bytes": 2709,
+          "sha256": "b1bc2327941c1efb43c35505ed31fbb989ae7d054bf84f3ba37fbda335a0ff77"
+        },
+        {
+          "file": "BankWatch_topic_registration.txt",
+          "status": 200,
+          "bytes": 9636,
+          "sha256": "7649b67a2f484c3b7ba1ee8eccadaff2245d3d35c3b4b928b9c18024e0041bf2"
+        },
+        {
+          "file": "FINAL_VALIDATION.json",
+          "status": 200,
+          "bytes": 2724,
+          "sha256": "b682350170e42fc64a49e28d0d5004da6900b14efc74d2a93156e41acf6fb7fe"
+        },
+        {
+          "file": "SHA256SUMS.txt",
+          "status": 200,
+          "bytes": 1124,
+          "sha256": "e176beef6779b7e52d1d394a2bb0e9a34f160da3a972107ce940fe47f45c0f95"
+        },
+        {
+          "check": "homepage and demo HTML exact",
+          "status": "PASS"
+        }
+      ],
+      "old_zip_HTTP": 404
+    },
+    "old_v110_zip_HTTP": 404
+  },
+  "bundle_checksums": {
+    "public": {
+      "name": "BankWatch-v1.11-final-public.zip",
+      "bytes": 847641,
+      "entries": 13,
+      "sha256": "62055eeeee6e436b63607255c7e61acc15f5e555fd4b827596ee4fe7ccfa8903"
+    },
+    "private": {
+      "name": "BankWatch-v1.11-final-private.zip",
+      "bytes": 2727812,
+      "entries": 36,
+      "sha256": "83cce0837c1d88fd4fc2d3dced310f211aa836a89840214b4773e1c1cc501542"
+    }
+  },
+  "scope": "Runtime Java/SQL/UI unchanged from Windows B2; new Codex Linux PostgreSQL integration10 passed; private/main and public/Pages are distinct repos.",
+  "not_performed": [
+    "User Windows local merge",
+    "New Windows HTTP run",
+    "LMS submission",
+    "Timed human presentation rehearsal"
+  ],
+  "presentation": {
+    "total_seconds": 600,
+    "content_seconds": 570,
+    "transition_buffer_seconds": 30,
+    "demo_included_seconds": 80,
+    "prompt": "downloads/BankWatch_Claude_Presentation_Prompt.md"
+  }
+}
